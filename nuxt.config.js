@@ -32,6 +32,11 @@ module.exports = {
     ]
   },
   css:['~assets/styles/index.css','aplayer/dist/APlayer.min.css'],
+  plugins:[
+    '~plugins/http.js',
+    '~plugins/prototype.js',
+    '~plugins/vue_use.js',
+  ],
   server: {
     port: 8080,
   },
