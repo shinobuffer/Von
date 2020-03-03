@@ -1,0 +1,165 @@
+.ph-info-about{
+	position: absolute;
+	left: 0;
+	right: 0;
+	color: white;
+	bottom: 35%;
+	text-shadow: .02rem .02rem .1rem black;
+	transition: .3s ease;
+}
+.page-content.about{
+	max-width: 9rem;
+	padding: .2rem .1rem;
+	overflow: hidden;
+}
+.about-post{
+	margin-bottom: .25rem;
+	text-align: left;
+}
+	.about-post time{
+		font-weight: bold;
+	}
+	.about-post code{
+		background: #b8c0cc30;
+		border-radius: .03rem;
+		padding: .02rem;
+	}
+	.about-post rt{
+		background: #b8c0cc30;
+	}
+	.about-post p,.link-description p{
+		margin-bottom: .15rem;
+	}
+	.about-post h2{
+		font-size: .18rem;
+		margin-bottom: .1rem;
+	}
+	.about-post h4{
+		border-bottom: .01rem dotted #eaeaea;
+		padding-bottom: .05rem;
+		margin-bottom: .05rem;
+	}
+		.about-post h2 span{
+			font-size: .22rem;
+			padding-right: .05rem;
+			margin-right: .05rem;
+			border-right: .01rem solid #8b8e99;
+		}
+/*About*/
+/*==================================================================*/
+/*Link*/
+#mobile-app .page-content.link{
+	padding: .2rem .1rem;
+}
+.page-content.link{
+	padding-top: .2rem;
+	padding-left: .2rem;
+	padding-right: .2rem;
+	max-width: 9rem;
+}
+.link-description h2:first-child{
+	margin-top: 0;
+}
+.link-description h2{
+	font-size: .2rem;
+	letter-spacing: .02cm;
+	margin: .25rem 0 .1rem;
+}
+	.link-description ul{
+		margin: .1rem 0;
+		padding-left: .4rem;
+		list-style: disc;
+	}
+
+.link-category .link_subtitle.friends{
+	color: #FF7D7D;
+	background: linear-gradient(90deg, transparent, #fff3f3, transparent);
+}
+.link-category .link_subtitle {
+	margin: .2rem 0;
+	padding: .1rem 0;
+	font-weight: bold;
+	color: #00a1d6;
+	background: linear-gradient(90deg, transparent, #dff8ff, transparent);
+	transition: .5s ease-in-out;
+}
+	.link_subtitle p{
+		font-weight: normal;
+		font-size: .12rem;
+		padding-top: .05rem;
+		color: #bbbbbb;
+	}
+	#mobile-app .link-category .friend-list{
+		padding: 0 .2rem;
+	}
+	.link-category .friend-list{
+		padding: 0 .5rem;
+	}
+		.friend-list ul,.link-list ul{
+			overflow: hidden;
+			list-style-type: none;
+			text-align: left;
+		}
+			#mobile-app .friend-list ul li{
+				width: 100%;
+			}
+			.friend-list ul li{
+				position: relative;
+				float: left;
+				width: 50%;
+				border-radius: .05rem;
+				transition: all .3s ease-out;
+				list-style: none;
+			}
+			.friend-list ul li:hover{
+				background: rgba(230,244,250,.5);
+			}
+				.friend-list ul li a{
+					display: block;
+					height: .8rem;
+					padding: 0 .1rem 0 .9rem;
+					text-align: left;
+				}
+				.friend-list ul li a img{
+					position: absolute;
+					width: .6rem;
+					height: .6rem;
+					top: .1rem;
+					left: .1rem;
+					border-radius: .1rem;
+					object-fit: cover;
+					object-position: center;
+				}
+				.friend-list ul li a h5{
+					padding-top: .15rem;
+					font-size: .18rem;
+					font-weight: normal;
+				}
+				.friend-list ul li a p{
+					color: #6d757a;
+					font-size: .14rem;
+					margin: .05rem 0;
+				}
+				.friend-list ul li a h5,.friend-list ul li a p{
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+	.link-category .link-list{
+
+	}
+		.link-list ul li{
+			width: 50%;
+			display: inline-block;
+			font-size: .14rem;
+			padding: .05rem .15rem;
+		}
+		.link-list ul li:nth-child(odd){
+			text-align: right;
+		}
+		.link-list ul li:nth-child(even){
+			text-align: left;
+		}
+			.link-list ul li a:hover{
+				color: #00a1d6;
+			}

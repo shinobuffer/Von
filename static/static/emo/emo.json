@@ -1,0 +1,30 @@
+[
+  {
+    "emoSeries": "2233",
+    "path": "/static/emo/2233/",
+    "thumbnail": "4402e6e2322eb29cd52dcf9240af6ed6.webp",
+    "emoList": [{"des": "无语", "imgSrc": "27df619585afad4c65eebe95ba98d085.webp"}, {"des": "大哭", "imgSrc": "d0cfabad423efa8c95ceb9f98d8778ca.webp"}, {"des": "困惑", "imgSrc": "e57c286862459e24155ab7c6fb1bcd74.webp"}, {"des": "郁闷", "imgSrc": "f4bc4b846c0fbe083e5514a43372201a.webp"}, {"des": "吃惊", "imgSrc": "2f4e277fd60c38292802bc4078d01a16.webp"}, {"des": "吐魂", "imgSrc": "77498db27a778e6573c6f2a97030700a.webp"}, {"des": "卖萌", "imgSrc": "1f5b0b384c45d78d8008cdcae7b6b57f.webp"}, {"des": "委屈", "imgSrc": "af41e0fd8f967c8f968c5d7216725138.webp"}, {"des": "喝水", "imgSrc": "2c8250acfd81947cac86e88a2faa49f6.webp"}, {"des": "汗", "imgSrc": "a009caa7d8bae4cc6c68136156587d34.webp"}, {"des": "第一", "imgSrc": "918024a67763361e7c7937695e77ffc3.webp"}, {"des": "耶", "imgSrc": "7f74405ce652c793c7891c226207ab15.webp"}, {"des": "大笑", "imgSrc": "4402e6e2322eb29cd52dcf9240af6ed6.webp"}, {"des": "疑问", "imgSrc": "9822c60db4d9f49c20ba67a188d5c86f.webp"}, {"des": "怒", "imgSrc": "8a95a68143e6ed6eb22486e07e3bd34d.webp"}],
+    "pic": true
+  },
+  {
+    "emoSeries": "小黄脸",
+    "path": "/static/emo/plain/",
+    "thumbnail": "bcd94fd3f6b6cfef934b944faf4f9382.webp",
+    "emoList": [{"des": "支持", "imgSrc": "262b0b07dfd0cad4cb8eb442fee44882.webp"}, {"des": "无语", "imgSrc": "27df619585afad4c65eebe95ba98d085.webp"}, {"des": "大哭", "imgSrc": "d0cfabad423efa8c95ceb9f98d8778ca.webp"}, {"des": "doge", "imgSrc": "03ea345ce429b6581d7c28c33305c2b6.webp"}, {"des": "傲娇", "imgSrc": "e3f1124cb5b212cf015c87bacbe5fe2b.webp"}, {"des": "害羞", "imgSrc": "0e025345ece4c327bf0278a0d4b3631f.webp"}, {"des": "呆", "imgSrc": "4894c23dd5ef63f827c0c1339495e088.webp"}, {"des": "囧", "imgSrc": "28986931b90a613b312e004ee2d4925a.webp"}, {"des": "嫌弃", "imgSrc": "485a3f823ee4f7b6e7db6620bfede57c.webp"}, {"des": "微笑", "imgSrc": "5acfd68d016cc6141559976112b7beb4.webp"}, {"des": "吐魂", "imgSrc": "77498db27a778e6573c6f2a97030700a.webp"}, {"des": "吐", "imgSrc": "37a03b5e5ec229e8b868693d89ed5b87.webp"}, {"des": "滑稽", "imgSrc": "bcd94fd3f6b6cfef934b944faf4f9382.webp"}, {"des": "吃瓜", "imgSrc": "455e2b33e157302615678229812d5009.webp"}, {"des": "惊喜", "imgSrc": "ba8e1a9ae55fbd5390f4b7c994830737.webp"}, {"des": "尴尬", "imgSrc": "1ef4729c527b947833b5761771963550.webp"}, {"des": "妙啊", "imgSrc": "ec697e020ed66efc2816895ac2b5a5e1.webp"}, {"des": "委屈", "imgSrc": "af41e0fd8f967c8f968c5d7216725138.webp"}, {"des": "生病", "imgSrc": "75d80e662baa92dd5400de5f31db16a5.webp"}, {"des": "生气", "imgSrc": "e8c6c4d90f60dc0074480dc9d83f1fc1.webp"}, {"des": "喜欢", "imgSrc": "3d6c396cf4dea3ba2ddb255499dc356a.webp"}, {"des": "惊讶", "imgSrc": "e3b28512cdd930a916f970070e17c10f.webp"}, {"des": "捂脸", "imgSrc": "eb0caf12c6f8d145fc7ab35c96cec54d.webp"}, {"des": "画风突变", "imgSrc": "16815a2416a70afbe8c3e0b9b02b54ee.webp"}, {"des": "奸笑", "imgSrc": "ab5805c719476ccd364209b755dec633.webp"}, {"des": "大笑", "imgSrc": "4402e6e2322eb29cd52dcf9240af6ed6.webp"}, {"des": "抠鼻", "imgSrc": "3822354914484432273dafbdb18aa94d.webp"}, {"des": "笑哭", "imgSrc": "11d2b3795aa8bbc128137269ed565070.webp"}],
+    "pic": true
+  },
+  {
+    "emoSeries": "颜文字",
+    "path": "/static/emo/",
+    "thumbnail": "kaomoji.png",
+    "emoList": ["(⌒▽⌒)","（￣▽￣）","(=・ω・=)","(｀・ω・´)","(〜￣△￣)〜","(･∀･)","(°∀°)ﾉ","(￣3￣)","╮(￣▽￣)╭","( ´_ゝ｀)","←_←","→_→","(<_<)","(>_>)","(;¬_¬)","(\"▔□▔)/","(ﾟДﾟ≡ﾟдﾟ)!?","Σ(ﾟдﾟ;)","Σ( ￣□￣||)","(´；ω；`)","（/TДT)/","(^・ω・^ )","(｡･ω･｡)","(●￣(ｴ)￣●)","ε=ε=(ノ≧∇≦)ノ","(´･_･`)","(-_-#)","（￣へ￣）","(￣ε(#￣) Σ","ヽ(`Д´)ﾉ","(╯°口°)╯(┴—┴","（#-_-)┯━┯","_(:3」∠)_","(悲)","(半恼)","(察觉)"],
+    "pic": false
+  },
+  {
+    "emoSeries": "emoji",
+    "path": "/static/emo/",
+    "thumbnail": "emoji.png",
+    "emoList": ["😂", "😀", "😅", "😊", "🙂", "🙃", "😌", "😍", "😘", "😜", "😝", "😏", "😒", "🙄", "😳", "😡", "😔", "😫", "😱", "😭", "💩", "👻", "🙌", "🖕", "👍", "🌚", "🌝", "🙈", "💊", "😶", "🙏", "🍦", "🍉", "😣"],
+    "pic": false
+  }
+]

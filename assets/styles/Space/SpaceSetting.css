@@ -1,0 +1,296 @@
+.space-setting{
+	text-align: left;
+	padding: .2rem;
+}
+.setting-tags .section-content{
+	max-width: 8rem;
+}
+
+
+
+.tag-set-btns{
+	margin: .1rem 0;
+}
+	.tag-set-btns .tag-del,.tag-set-btns .tag-add{
+		position: relative;
+		display: inline-block;
+		width: 2rem;
+		margin-right: .2em;
+	}
+	.series-add,.cat-add{
+		position: relative;
+
+	}
+		.tag-del a,.tag-add a,.series-add a,.cat-add a,.link-add a{
+			padding: 0 .05rem;
+			position: absolute;
+			cursor: pointer;
+			top: .06rem;
+			right: 0;
+			border-left: .01rem dotted #eaeaea;
+		}
+		.tag-del input,.tag-add input,.series-add input,.series-des-add input,.cat-add input{
+			width: 100%;
+			outline: none;
+			font-size: .14rem;
+			line-height: .14rem;
+			padding: .05rem .3rem .05rem .1rem;
+			border: .01rem solid #eeeeee;
+			border-radius: .03rem;
+		}.series-des-add input{ padding: .05rem .1rem}
+		.tag-del input:focus + .match-list,.tag-del:hover .match-list{
+			display: block;
+		}
+		.tag-del .match-list{
+			display: none;
+			padding: .1rem 0;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			font-size: .14rem;
+			font-weight: 600;
+			list-style-type: none;
+			background: white;
+			border: .01rem solid #eeeeee;
+		}
+			.tag-del .match-list .match-list-item{
+				line-height: .2rem;
+				padding: 0 .1rem;
+				cursor: pointer;
+				transition: .3s ease;
+			}
+			.tag-del .match-list .match-list-item:hover{
+				background: #eaeaea;
+			}
+.setting-series,.setting-cat{
+	display: inline-block;
+	width: 2.2rem;
+	margin-right: .3rem;
+	margin-bottom: .2rem;
+	vertical-align: top;
+}
+	.setting-series ul,.setting-cat ul{
+		list-style-type: none;
+		border: .01rem solid #eaeaea;
+		border-radius: .04rem;
+		margin: .1rem 0;
+	}
+		.setting-series ul li,.setting-cat ul li{
+			position: relative;
+			border-bottom: .01rem solid #eaeaea;
+			height: .4rem;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			line-height: .4rem;
+			font-size: .14rem;
+			padding: 0 .3rem 0 .1rem;
+			user-select: none;
+			transition: .3s ease;
+		}
+		.setting-series ul li:hover,.setting-cat ul li:hover{
+			background: #00a1d6;
+			color: white;
+		}
+		.setting-series ul li:last-child,.setting-cat ul li:last-child{
+			border-bottom: none;
+		}
+			.setting-series ul li:hover a,.setting-cat ul li:hover a{
+				opacity: 1;
+			}
+			.setting-series ul li a,.setting-cat ul li a{
+				position: absolute;
+				top: 0;
+				right: .1rem;
+				font-size: .2rem;
+				cursor: pointer;
+				color: white;
+				opacity: 0;
+			}
+			.setting-cat ul li span{
+				color: #ddd;
+				font-size: .12rem;
+			}
+.header-card{
+	display: inline-block;
+	width: 2.5rem;
+	border: .01rem solid #eaeaea;
+	margin-right: .2rem;
+	margin-bottom: .2rem;
+}
+	.header-card .bg-chg{
+		position: relative;
+		background-position: center;
+		background-size: cover;
+		height: 1rem;
+		padding: .2rem;
+	}
+	.header-card .bg-chg:before{
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: #1e1e1e60;
+	}
+		.header-card .bg-chg a{
+			position: absolute;
+			color: white;
+			padding: .05rem;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			cursor: pointer;
+		}
+		.header-card .bg-chg:hover a{
+			opacity: 1;
+		}
+		.header-card .bg-chg input{
+			position: relative;
+			background: transparent;
+			height: .3rem;
+			width: 100%;
+			border-radius: .02rem;
+			border: none;
+			outline: none;
+			box-shadow: none;
+			color: white;
+			font-size: .14rem;
+			line-height: .3rem;
+			font-weight: 600;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			transition: .3s ease;
+		}
+		.header-card .bg-chg input:hover{ /*这一个可与spaceAlbumAlbum合并*/
+			background: hsla(0,0%,100%,.2);
+			box-shadow: 0 0 0 .01rem hsla(0,0%,100%,.5);
+		}
+		.header-card .bg-chg input:focus{
+			background: #ffffffa0;
+			box-shadow: inset 0 .02rem .04rem rgba(35,54,86,.3);
+			color: #6d757a;
+		}
+	.header-card .bg-title{
+		position: relative;
+		height: .5rem;
+		background: #f8f8f8;
+		color: #6d757a;
+		text-align: center;
+		line-height: .5rem;
+		font-weight: 600;
+		user-select: none;
+	}
+		.header-card .bg-title a{
+			position: absolute;
+			top: .1rem;
+			right: .1rem;
+			background: white;
+			font-size: .12rem;
+			font-weight: normal;
+			line-height: .12rem;
+			padding: .05rem;
+			border: .01rem solid #eaeaea;
+			border-radius: .02rem;
+			cursor: pointer;
+		}
+		.header-card .bg-title a:hover{
+			background: #eaeaea;
+		}
+
+.s-link-list{
+	border: .01rem solid #eaeaea;
+	font-size: 0;
+	margin-bottom: .2rem;
+}
+	.s-link-list h4{
+		display: inline-block;
+		background: #eaeaea;
+		writing-mode: vertical-rl;
+		font-size: .16rem;
+		line-height: .5rem;
+		width: .5rem;
+		height: 1rem;
+		text-align: center;
+		vertical-align: top;
+	}
+	.s-link-list ul{
+		display: inline-block;
+		padding: .1rem .2rem;
+		max-width: calc(100% - .5rem);
+		max-height: 1rem;
+		overflow: auto;
+		vertical-align: top;
+		list-style-type: none;
+	}
+		.s-link-list ul li{
+			position: relative;
+			float: left;
+			font-size: .14rem;
+			line-height: .2rem;
+			margin-right: .15rem;
+		}
+			.s-link-list ul li a:hover{
+				color: #00a1d6;
+			}
+			.s-link-list ul li i{
+				position: absolute;
+				opacity: 0;
+				top: -.06rem;
+				right: -.1rem;
+				font-size: .12rem;
+				line-height: .12rem;
+				color: #b8c0cc;
+				cursor: pointer;
+				transition: .3s ease;
+			}
+			.s-link-list ul li:hover i{
+				opacity: 1;
+			}
+			.s-link-list ul li i:hover{
+				color: #FF7D7D;
+			}
+
+.link-add{
+	display: block;
+	position: relative;
+	margin-bottom: .2rem;
+	font-size: 0;
+}
+	.link-add .type-input{
+		display: inline-block;
+		position: relative;
+		padding: 0 .1rem;
+		width: 15%;
+		border: .01rem solid #eaeaea;
+		border-radius: .03rem 0 0 .03rem;
+		line-height: .26rem;
+		text-align: center;
+		vertical-align: top;
+	}
+	.link-add .type-input span{
+		font-size: .15rem;
+		vertical-align: middle;
+	}
+	.link-add .type-input i{
+		font-size: .16rem;
+	}
+	.link-add input{
+		display: inline-block;
+		padding: .05rem .3rem .05rem .1rem;
+		width: 65%;
+		outline: none;
+		font-size: .14rem;
+		line-height: .16rem;
+		border: .01rem solid #eeeeee;
+		margin-right: -.01rem;
+	}
+	.link-add input.link-name{
+		width: 20%;
+	}
+	.link-add input:focus{
+		box-shadow: inset 0 0 .04rem rgba(35,54,86,.1);
+	}
