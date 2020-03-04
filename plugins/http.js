@@ -3,7 +3,7 @@ import qs from 'qs';
 axios.defaults.timeout = 10000;
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = process.env.API_ROOT;
-export default ({store,redirect},inject)=>{
+export default ({app,store,redirect,req},inject)=>{
   // console.log(store);
   // console.log(redirect);
   axios.interceptors.response.use(
@@ -34,6 +34,19 @@ export default ({store,redirect},inject)=>{
     })
   });
 
+  app.$relayFetch = (url,params,headers)=>{
+    return new Promise((resolve, reject)=>{
+      axios.get(`http://localhost${url}`,{
+        params:params,
+        headers:headers
+      }).then(res=>{
+        resolve(res)
+      }).catch(err=>{
+        reject(err)
+      })
+    })
+  };
+
   inject('post',(url,data={},op={headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}})=>{
     return new Promise((resolve,reject)=>{
       axios.post(url,qs.stringify(data),op)
@@ -44,6 +57,18 @@ export default ({store,redirect},inject)=>{
       })
     })
   });
+
+  app.$relayPost = (url,data,headers)=>{
+    return new Promise((resolve,reject)=>{
+      axios.post(`http://localhost${url}`,qs.stringify(data),{
+        headers:{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',...headers}
+      }).then(res=>{
+        resolve(res)
+      }).catch(err=>{
+        reject(err)
+      })
+    })
+  };
 
   inject('post_form',(url,data,op={headers: {'Content-Type': 'multipart/form-data'},timeout:100000})=>{
     return new Promise((resolve,reject)=>{
