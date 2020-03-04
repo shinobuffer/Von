@@ -84,13 +84,14 @@
             </div>
           </div>
         </div>
-<!--        <comment id_="1" type="link" unique="1link"></comment>-->
+        <comment-module id_="1" type="link" unique="1link"></comment-module>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import CommentModule from '~/components/CommentModule';
 export default {
   head(){
     return{
@@ -98,7 +99,7 @@ export default {
     }
   },
   components:{
-
+    CommentModule
   },
   asyncData({app,req}){
     return app.$relayFetch('/apis/apiv11.php',{},req.headers).then(res=>{
