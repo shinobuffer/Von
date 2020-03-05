@@ -5,9 +5,11 @@
 }
 .note-sort-options{
 	margin: .3rem 0;
+  font-size: 0;
 }
 .note-sort-options span{
 	display: inline-block;
+  font-size: .16rem;
 	line-height: .28rem;
 	border: .01rem solid #9dd9ff;
 	color: #9dd9ff;

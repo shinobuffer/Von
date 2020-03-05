@@ -21,6 +21,23 @@ export function getCookie(key) {
   return ''
 }
 
+export function getCookieFromStr(key,str){
+  if (str.length > 0) {
+    let start = str.indexOf(key+'=');
+    if (start !== -1) {
+      start = start + key.length + 1;
+      let end = str.indexOf(';',start);
+      if (end===-1){
+        end = str.length;
+        return unescape(str.substring(start,end))
+      }
+      else
+        return unescape(str.substring(start,end))
+    }
+  }
+  return ''
+}
+
 export function delCookie(key) {
   setCookie(key,'',-1)
 }

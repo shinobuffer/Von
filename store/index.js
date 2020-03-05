@@ -1,9 +1,10 @@
+import {getCookieFromStr,delCookie} from "../utils/storageManager";
 export const state = ()=>({
   platform:'',
   isMobile:false,
-  scrollTop:process.browser?(window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop):0,
-  screenHeight:process.browser?(window.innerHeight || document.documentElement.clientHeight):902,
-  screenWidth:process.browser?(window.innerWidth || document.body.clientWidth):1920,
+  scrollTop:process.client?(window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop):0,
+  screenHeight:process.client?(window.innerHeight || document.documentElement.clientHeight):902,
+  screenWidth:process.client?(window.innerWidth || document.body.clientWidth):1920,
   upping:false,
   isMasked:false,
   appBg:'',
@@ -35,8 +36,29 @@ export const mutations = {
   }
 };
 
+export const actions = {
+  nuxtServerInit({commit},{app,req}){
+    // 接受到页面请求，首先尝试自动登录填充登录信息供鉴权
+    let token = req.headers.cookie && getCookieFromStr('utk',req.headers.cookie);
+    if (token)
+      return app.$relayFetch('/apis/auth/aLogin.php',{},req.headers).then(res=>{
+        switch (res.data.code) {
+          case 0:
+            commit('account/alogin',{
+              token:token,
+              ...res.data.data
+            });
+            break;
+          case 1:
+            if (process.client)
+              delCookie('utk')
+        }
+      })
+  }
+};
+
 export const getters = {
   xAboveBottom(state){
-    return document.documentElement.scrollHeight - state.scrollTop - state.screenHeight
+    return process.client?document.documentElement.scrollHeight - state.scrollTop - state.screenHeight:233
   }
 };
