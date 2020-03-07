@@ -1,4 +1,4 @@
-import {getCookieFromStr,delCookie} from "../utils/storageManager";
+import {getCookieFromStr} from "../utils/storageManager";
 export const state = ()=>({
   platform:'',
   isMobile:false,
@@ -42,17 +42,11 @@ export const actions = {
     let token = req.headers.cookie && getCookieFromStr('utk',req.headers.cookie);
     if (token)
       return app.$relayFetch('/apis/auth/aLogin.php',{},req.headers).then(res=>{
-        switch (res.data.code) {
-          case 0:
-            commit('account/alogin',{
-              token:token,
-              ...res.data.data
-            });
-            break;
-          case 1:
-            if (process.client)
-              delCookie('utk')
-        }
+        if (res.data.code === 0)
+          commit('account/alogin',{
+            token:token,
+            ...res.data.data
+          });
       })
   }
 };
