@@ -36,6 +36,7 @@ module.exports = {
     '~plugins/http.js',
     '~plugins/prototype.js',
     '~plugins/vue_use.js',
+    '~plugins/listener.client.js',
   ],
   server: {
     port: 8080,

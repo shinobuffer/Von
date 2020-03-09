@@ -153,7 +153,7 @@ export default {
 					else{
 						let gap_d = Math.floor(gap_h/24);
 						if (gap_d<30)return gap_d + '日前';
-						else return datetime
+						else return datetime.substr(0,16)
 					}
 				}
 			}
