@@ -66,9 +66,16 @@
 <script>
 import {mapGetters,mapState} from 'vuex';
 import Mixin_PanelH from	"../reuse/mixins/Mixin-PanelH";
-import HomepageAside from '../components/HomepageAside';
+import HomepageAside from '../components/aside/HomepageAside';
 import HomepageHeader from '../components/HomepageHeader';
+import UCONF from '../config/user.conf';
+const {title,subTitle} = UCONF.siteTitle;
 export default {
+  head(){
+    return{
+      title:`${title} | ${subTitle}`
+    }
+  },
   components: {
     HomepageAside,
     HomepageHeader

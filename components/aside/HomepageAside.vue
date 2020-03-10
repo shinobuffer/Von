@@ -35,8 +35,8 @@
 </template>
 
 <script>
-import Mixin_PanelH from	"../reuse/mixins/Mixin-PanelH";
-import Mixin_ContentAside from "../reuse/mixins/Mixin-ContentAside";
+import Mixin_PanelH from "../../reuse/mixins/Mixin-PanelH";
+import Mixin_ContentAside from "../../reuse/mixins/Mixin-ContentAside";
 export default {
   name: "HomepageAside",
   filters:{
