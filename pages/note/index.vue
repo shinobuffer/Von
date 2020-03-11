@@ -97,7 +97,7 @@ export default {
     }
   },
   asyncData({app,req}){
-    return app.$relayFetch('/apis/apiv1.php',{_:'note'},req.headers).then(res=>{
+    return app.$fetch('/apis/apiv1.php',{_:'note'},req).then(res=>{
       let {headerInfo,catMap,notes,notice} = res.data.data;
       notes.forEach(e=>{
         e.tags = e.tags?e.tags.split(','):[];

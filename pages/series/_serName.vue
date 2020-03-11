@@ -100,11 +100,7 @@ export default {
     }
   },
   async asyncData({app,params,req}){
-    let res;
-    if (process.client)
-      res = await app.$fetch('/apis/apiv14.php',{serName:params.serName});
-    else
-      res = await app.$relayFetch('/apis/apiv14.php',{serName:params.serName},req.headers);
+    let res = await app.$fetch('/apis/apiv14.php',{serName:params.serName},req);
     let {serInfo, serArts, serList} = res.data.data;
     serInfo = serInfo || {serName:'系列不存在',serDes:'×××××××××××肆〇肆×××××××××××'};
     let tags = [];

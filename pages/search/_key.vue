@@ -89,33 +89,18 @@ export default {
   },
   asyncData({app,params,req}){
     //分成searchResult 和 randomResult，防止 panel 抢用 randomResult（因为asyncData中无法控制searchFound的更新顺序
-    if (process.client){
-      return app.$fetch('/apis/apiv10.php',{s:params.key}).then(res=>{
-        let {found,result} = res.data.data;
-        return{
-          headTitle:`搜索：${params.key}`,
-          searchWaiting:false,
-          searchFound:!!found,
-          searchResults:result,
-          resultNum:result.length,
-          curResults:!!found?result.slice(0,result.length<8?result.length:8):[],
-          randomResult:!!found?[]:result
-        }
-      })
-    }
-    else
-      return app.$relayFetch('/apis/apiv10.php',{s:params.key},req.headers).then(res=>{
-        let {found,result} = res.data.data;
-        return{
-          headTitle:`搜索：${params.key}`,
-          searchWaiting:false,
-          searchFound:!!found,
-          searchResults:result,
-          resultNum:result.length,
-          curResults:!!found?result.slice(0,result.length<8?result.length:8):[],
-          randomResult:!!found?[]:result
-        }
-      })
+    return app.$fetch('/apis/apiv10.php',{s:params.key},req).then(res=>{
+      let {found,result} = res.data.data;
+      return{
+        headTitle:`搜索：${params.key}`,
+        searchWaiting:false,
+        searchFound:!!found,
+        searchResults:result,
+        resultNum:result.length,
+        curResults:!!found?result.slice(0,result.length<8?result.length:8):[],
+        randomResult:!!found?[]:result
+      }
+    })
   },
   data(){
     return {

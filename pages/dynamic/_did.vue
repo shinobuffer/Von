@@ -80,19 +80,16 @@ export default {
     DynamicCard
   },
   async asyncData({app,params,req,error}){
-    let res,emoData,emoMap={};
-    if (process.client){
-      ({data:emoData} = await app.$fetch('/static/emo/emo.json'));
-      res = await app.$fetch('/apis/apiv16.php',params);
-    }
-    else{
-      ({data:emoData} = await app.$relayFetch('/static/emo/emo.json',{},req.headers));
-      res = await app.$relayFetch('/apis/apiv16.php',params,req.headers);
-    }
+    let [{data:emoData},res] = await Promise.all([
+      app.$fetch('/static/emo/emo.json',{},req),
+      app.$fetch('/apis/apiv16.php',params,req)
+    ]);
     if (res.data.data.dynamics.length === 0){
       error({statusCode:404,message:'动态404'});
       return;
     }
+
+    let emoMap={};
     emoData.forEach(e=>{
       e.thumbnail = e.path + e.thumbnail;
       if (e.pic){

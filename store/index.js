@@ -41,7 +41,7 @@ export const actions = {
     // 接受到页面请求，首先尝试自动登录填充登录信息供鉴权
     let token = req.headers.cookie && getCookieFromStr('utk',req.headers.cookie);
     if (token)
-      return app.$relayFetch('/apis/auth/aLogin.php',{},req.headers).then(res=>{
+      return app.$fetch('/apis/auth/aLogin.php',{},req).then(res=>{
         if (res.data.code === 0)
           commit('account/alogin',{
             token:token,

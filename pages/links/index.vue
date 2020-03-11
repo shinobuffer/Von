@@ -102,7 +102,7 @@ export default {
     CommentModule
   },
   asyncData({app,req}){
-    return app.$relayFetch('/apis/apiv11.php',{},req.headers).then(res=>{
+    return app.$fetch('/apis/apiv11.php',{},req).then(res=>{
       let data = res.data.data;
       return{
         headerInfo:data.headerInfo,

@@ -58,7 +58,7 @@ export default {
     }
   },
   asyncData({app,req}){
-    return app.$relayFetch('/apis/apiv12.php',{},req.headers).then(res=>{
+    return app.$fetch('/apis/apiv12.php',{},req).then(res=>{
       return{
         headerInfo:res.data.data.headerInfo
       }

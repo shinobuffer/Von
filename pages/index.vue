@@ -87,7 +87,7 @@ export default {
     },
   },
   asyncData({app,req}){
-    return app.$relayFetch('/apis/apiv9.php',{},req.headers).then(res=>{
+    return app.$fetch('/apis/apiv9.php',{},req).then(res=>{
       let{arts,topped,notice} = res.data.data;
       return{
         loading:false,
