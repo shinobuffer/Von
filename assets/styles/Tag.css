@@ -15,15 +15,12 @@
 }
 
 .not-find{
-	height: 3rem;
+	height: 2.5rem;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 }
-	.not-find  h1{
-		font-size: .3rem;
-		margin-bottom: .3rem;
-	}
-	.not-find a{
-		color: #888888;
+	.not-find p{
+		margin-top: .3rem;
+    color: #8b8e99;
 	}

@@ -111,7 +111,6 @@
 	}
 		.item-name .item-link{
 			font-size: .15rem;
-			margin-right: .1rem;
 			transition: .5s;
 			word-wrap: break-word;
 		}
@@ -121,7 +120,8 @@
 			background: #eaeaea;
 			padding: 0 .05rem;
 			border-radius: .1rem;
-			margin-right: .05rem;
+      margin-left: .05rem;
+      user-select: none;
 		}
 		.item-name .item-link:hover{
 			color: #00a1d6;
