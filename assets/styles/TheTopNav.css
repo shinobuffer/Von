@@ -33,19 +33,19 @@
 .site-header.reachTop:hover .snh,.site-header.reachTop:hover .search-box-t{
 	opacity: 1;
 }
-.header-scrollbar{
+/*.header-scrollbar{
 	height: .03rem;
 	background: #5abebc;
 	transition: 1s ease-in-out;
-}
+}*/
 .header-nav{
 	width: 100%;
 	padding: 0 .2rem;
 }
 	.site-brand{
 		position: relative;
-		height: .67rem;
-		animation: fadeInLeft 1.5s;
+		height: .66rem;
+		animation: fadeInLeft 1s ease-in-out;
 	}
 		.reachTop .site-brand a{
 			color: white;
@@ -55,7 +55,7 @@
 			font-size: .2rem;
 			font-weight: 800;
 			line-height: .8rem;
-			margin: 0 .3rem;
+			margin: 0 .2rem;
 		}
 		.oshino{
 			padding-top: .13rem;
@@ -74,7 +74,7 @@
 		}
 	.snh{
 		position: absolute;
-		height: .67rem;
+		height: .66rem;
 		left: 50%;
 		min-width: 7.6rem;
 		pointer-events: none;
@@ -83,9 +83,9 @@
 		display: inline-block;
 		position: relative;
 		left: -50%;
-		margin-top: .2rem;
+		margin-top: .18rem;
 		pointer-events: auto !important;
-		animation: enlarge 1.5s;
+		animation: enlarge 1s ease-in-out;
 	}
 		.site-nav .menu{
 			display: inline-block;
@@ -102,7 +102,7 @@
 					content: '';
 					position: absolute;
 					display: block;
-					bottom: -.17rem;
+					bottom: -.18rem;
 					height: .05rem;
 					width: 0;
 					background: #5abebc;
@@ -152,12 +152,12 @@
 			}
 				.sub-menu li a{
 					font-size: .16rem;
-					margin: .05rem 0;
+					margin: .02rem 0;
 				}
 	.search-box-t{
 		position: relative;
-		margin: .16rem .1rem;
-		animation: fadeInRight 1.5s;
+    line-height: .66rem;
+		animation: fadeInRight 1s ease-in-out;
 	}
 		.home .search-box-t{
 			display: none;
@@ -165,17 +165,19 @@
 		.search-box-t input{
 			outline: none;
 			border: .02rem solid #eaeaea;
-			padding: .07rem;
-			width: .33rem;
+			width: .32rem;
+      height: .32rem;
+      font-size: .14rem;
+      line-height: .28rem;
 			transition: .5s;
 			border-radius: .5rem;
 			color: transparent;
-			background: url(/static/images/search.png) no-repeat .05rem .05rem;
+			background: url(/static/images/search.png) no-repeat .04rem .04rem;
 		}
 		.search-box-t input:focus{
 			color: #425066;
 			width: 2rem;
-			padding: .07rem .07rem .07rem .3rem;
+			padding: 0 .1rem 0 .3rem;
 			border-color: #5abebc;
 		}
 .animated:hover .spin{
@@ -196,7 +198,7 @@
 
 /*小型导航*/
 .nav-content{
-	height: .47rem;
+	height: .5rem;
 	width: 100%;
 	padding: 0 .15rem;
 	text-align: center;
@@ -205,7 +207,7 @@
 	.nav-icon{
 		width: .21rem;
 		height: .21rem;
-		margin-top: .12rem;
+		margin-top: .15rem;
 		position: absolute;
 		transition: .5s ease-in-out;
 		cursor: pointer;
@@ -231,17 +233,12 @@
 		.nav-icon.open span:nth-child(3){top: .09rem;transform: rotate(-135deg)}
 	.nav-title{
 		font-size: .25rem;
-		line-height: .47rem;
+		line-height: .5rem;
 		font-weight: 600;
 		color: #4d4e56;
 	}
 	.reachTop .nav-title{
 		color: white;
-	}
-	.nav-login{
-		position: relative;
-		margin-top: .1rem;
-		font-size: .25rem;
 	}
 
 
