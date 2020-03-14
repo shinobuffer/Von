@@ -117,7 +117,8 @@
 				.share-option{
 					display: none;
 					float: left;
-					margin-right: .1rem;
+          padding: .1rem;
+          margin-top: -.1rem;
 					text-align: center;
 					animation: mini-fadeInUp .5s;
 				}

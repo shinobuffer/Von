@@ -1,4 +1,5 @@
 export default {
+  siteURL:'https://oshinonya.com',
 	sinceTime:1573659213000, //网站始于 2019.11.13 23:33:33 GTM+8
 	birthday:'1999-06-05', //生日，用于计算年龄
 	statusMap:[

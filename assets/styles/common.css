@@ -847,9 +847,13 @@ blockquote>:last-child{
 }
 .content-area .v-note-wrapper{
 	z-index: 999;
+  border: none;
 }
-.content-area .v-note-edit.divarea-wrapper,.content-area .v-note-show{
+/*.content-area .v-note-edit.divarea-wrapper,.content-area .v-note-show{
 	min-height: 7rem;
+}*/
+.content-area article .entry-content{
+  min-height: 7rem;
 }
 .content-area .v-note-wrapper, .content-area .v-show-content,.content-area textarea:disabled{
 	background: transparent !important;
@@ -1020,6 +1024,12 @@ input::-webkit-search-cancel-button{
 
 /*==================================================================*/
 /*other*/
+.page-enter-active,.page-leave-active{
+  transition: .3s ease-in-out;
+}
+.page-enter,.page-leave-to{
+  opacity: 0;
+}
 .masked{
 	-webkit-overflow-scrolling:touch;
 	position: fixed;
@@ -1057,9 +1067,6 @@ input::-webkit-search-cancel-button{
 }
 .page-content.article,.page-content.link{
 	padding-bottom: .5rem;
-}
-.content-area{
-	animation: fadeIn 2s ;
 }
 .notice{
 	margin: .2rem  0;
