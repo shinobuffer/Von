@@ -5,4 +5,9 @@ export default ({store})=>{
     screenHeight:window.innerHeight || document.documentElement.clientHeight,
     screenWidth:window.innerWidth || document.body.clientWidth
   }),50);
+  store.commit('scrollTopC',window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop);
+  store.commit('screenSizeC',{
+    screenHeight:window.innerHeight || document.documentElement.clientHeight,
+    screenWidth:window.innerWidth || document.body.clientWidth
+  });
 }

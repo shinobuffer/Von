@@ -116,7 +116,8 @@
 		}
 	.luminous-box-sidebar{
 		position: absolute;
-		background: #dddddd;
+		background: rgba(0,0,0,.2);
+    box-shadow: -.04rem 0 .04rem .02rem #ffffff20;
 		top: 0;
 		bottom: 0;
 		right: 0;
