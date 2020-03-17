@@ -28,22 +28,7 @@
               <div class="rect4"></div>
               <div class="rect5"></div>
             </div>
-            <div class="panel-t tl" v-for="art in curArts" :key="art.aid">
-              <p class="pt-time"><i class="iconfont icon-time"></i> {{art.time.substr(0,10)}}</p>
-              <div class="panel-t-img">
-                <nuxt-link :to="art.aid" append>
-                  <img v-lazyload="[`/root${art.imgSrc}`,`/root${art.imgSrc}.thumb`]" :alt="art.title">
-                </nuxt-link>
-              </div>
-              <div class="panel-t-info ">
-                <h2 class="title"><nuxt-link :to="art.aid" append>{{art.title}}</nuxt-link></h2>
-                <p class="preview">{{art.preview}}</p>
-                <p class="cut-line-d" style="margin: .1rem 0"></p>
-                <span><i class="iconfont icon-geren"></i>{{art.author}}</span>
-                <span><i class="iconfont icon-fire"></i>{{art.readCount}}</span>
-                <span><nuxt-link :to="art.aid+'#comments'" append class="comments"><i class="iconfont icon-comment"></i>{{art.commentCount}}</nuxt-link></span>
-              </div>
-            </div>
+            <acg-panel v-for="article in curArts" :key="article.aid" :article="article"/>
           </div>
           <div class="pager-no-more" v-show="pageNum===curPage&&!artWaiting">没有更多啦</div>
           <div class="paging-box" v-if="pageNum>1">
@@ -63,7 +48,7 @@
             </div>
           </div>
         </div>
-        <trivial-aside v-if="!isMobile"/>
+        <component :is="asideName"></component>
       </div>
     </div>
   </div>
@@ -71,23 +56,35 @@
 
 <script>
 import {mapState} from 'vuex';
-import TrivialAside from '~/components/aside/TrivialAside';
+import AcgPanel from '~/components/public/AcgPanel';
+import AnimeAside from '~/components/aside/AnimeAside';
+import CodeAside from '~/components/aside/CodeAside';
+import GameAside from '~/components/aside/GameAside';
 import UCONF from '~/config/user.conf';
-const {title} = UCONF.siteTitle;
+const {siteTitle} = UCONF;
 export default {
-  name: "Trivial",
   head(){
     return{
-      title:`随写 | ${title}`
+      title:`${this.title} | ${siteTitle.title}`
     }
   },
-  components:{
-    TrivialAside
+  validate({params}){
+    return ['anime','code','game'].indexOf(params.type)!==-1
   },
-  asyncData({app,req}){
-    return app.$fetch('/apis/apiv1.php',{_:'trivial'},req).then(res=>{
+  components:{
+    AcgPanel,
+    AnimeAside,
+    CodeAside,
+    GameAside
+  },
+  asyncData({app,params,req}){
+    const asideMap = {anime:'AnimeAside',code:'CodeAside',game:'GameAside'};
+    const titleMap = {anime:'二次螈',code:'极客',game:'游民'};
+    return app.$fetch('/apis/apiv1.php',{_:params.type},req).then(res=>{
       let {headerInfo,artsNew,artsHot,artNum} = res.data.data;
       return{
+        title:titleMap[params.type],
+        asideName:asideMap[params.type],
         headerInfo,
         arts:{
           0:{1:artsNew},
@@ -96,13 +93,16 @@ export default {
         curArts:artsNew.concat(),
         artWaiting:false,
         noContent:!parseInt(artNum),
-        pageNum:Math.ceil(parseInt(artNum)/8)
+        pageNum:Math.ceil(parseInt(artNum)/6)
       }
     })
   },
   data(){
     return{
-      headerInfo:{imgSrc:'/static/images/loading.gif',title:'随写',description:''},
+      title:'',
+      asideName:'',
+
+      headerInfo:{imgSrc:'/static/images/loading.gif',title:'XX',description:''},
       artWaiting:true,
       noContent:false,
       pageNum:1,
@@ -144,7 +144,7 @@ export default {
       else{
         while (this.curArts.pop()){}
         this.artWaiting = true;
-        this.$fetch('/apis/apiv2.php',{_:'trivial',pn:cur,order:this.orderFlag}).then(response=>{
+        this.$fetch('/apis/apiv2.php',{_:this.$route.params.type,pn:cur,order:this.orderFlag}).then(response=>{
           this.$set(this.arts[this.orderFlag],cur,response.data.data.arts);
           this.artWaiting = false;
           this.arts[this.orderFlag][cur].forEach(e=>this.curArts.push(e));

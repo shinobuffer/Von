@@ -21,10 +21,10 @@ export default {
 		{icon:'iconfont icon-steam',description:'steam',value:'Bersder3000'}
 	],
 	languageList:[//Code页面右侧语言列表
-		{imgSrc:'/static/images/lang/moe.python.jpg',description:'python是最好的语言'},
-		{imgSrc:'/static/images/lang/moe.c.png',description:'这是什么，我有学过吗(滑稽)'},
-		{imgSrc:'/static/images/lang/moe.php.jpg',description:'本站后端支持'},
-		{imgSrc:'/static/images/lang/moe.javaScript.jpg',description:'Vue+原生js=无敌'},
+		{lang:'python',imgSrc:'/static/images/lang/moe.python.jpg',description:'python是最好的语言'},
+		{lang:'c',imgSrc:'/static/images/lang/moe.c.png',description:'这是什么，我有学过吗(滑稽)'},
+		{lang:'php',imgSrc:'/static/images/lang/moe.php.jpg',description:'破站后端支持'},
+		{lang:'js',imgSrc:'/static/images/lang/moe.javaScript.jpg',description:'...'},
 	],
 	siteHistory:[//关于页面的网站黑历史
 		['????-??-??','学Vue时用Vue写了一个页面，自认为还不错，加之有建博客的想法，然后一发不可收拾...'],

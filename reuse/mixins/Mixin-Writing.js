@@ -6,7 +6,7 @@ export default {
 			mdSetting:PCONF.MDEditMode,
 
 			title:'',
-			author:'oshino',
+			author:'忍野ニャ',
 			preview:'',
 			rawContent:'',
 			selectedTagsID:[],
