@@ -1,4 +1,4 @@
 export default function ({store,redirect}) {
-  if (!store.state.account.loginStatus)
+  if (store.state.account.loginStatus)
     redirect('/');
 }

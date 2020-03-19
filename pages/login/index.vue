@@ -32,7 +32,7 @@ import {mapState} from 'vuex';
 import {aesEncrypt} from '~/utils/crypto';
 import Validator from '~/utils/Validator';
 export default {
-  middleware:'preauth',
+  middleware:'notauth',
   head(){
     return{
       title:'Sign In | 忍野喵'

@@ -1,5 +1,4 @@
 import PCONF from "~/config/project.conf"
-import {getCookie} from "~/utils/lib";
 export default {
 	data(){
 		return{
@@ -30,31 +29,10 @@ export default {
 	computed:{
 		isMobile(){return this.$store.state.isMobile},
 	},
-	beforeRouteEnter(to,from,next){
-		//详细见Space.vue
-		if (!from.name){
-			if (getCookie('utk')){
-				next();
-			}
-			else{
-				next('/');
-			}
-		}
-		else{
-			if (to.meta.loginStatus){
-				next();
-			}
-			else{
-				next('/');
-			}
-		}
-	},
 	beforeRouteLeave(to,from,next){
-		if(to.name==='space'||to.name==='homepage')next();
-		else{
-			let r = window.confirm('离开会导致未保存的信息丢失，是否继续');
-			if(r)next();
-		}
+		if(to.name==='space'||to.name==='index')next();
+		else
+      window.confirm('离开会导致未保存的信息丢失，是否继续') && next()
 	},
 	methods:{
 		selectTagID(tid){
