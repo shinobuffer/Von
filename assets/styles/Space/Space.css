@@ -38,18 +38,19 @@
 	font-size: .14rem;
 }
 	.sidenav-list{list-style-type: none;margin: .1rem 0}
-		.sidenav-list .sidenav-item{
+		.sidenav-list .sidenav-item a{
+      display: block;
 			text-align: left;
 			line-height: .4rem;
 			padding-left: .3rem;
 			transition: .3s ease;
 			cursor: pointer;
 		}
-		.sidenav-list .sidenav-item:hover{
+		.sidenav-list .sidenav-item a:hover{
 			background-color: #f4f5f7;
 			color: #00a1d6;
 		}
-		.sidenav-list .sidenav-item.cur{
+		.sidenav-list .sidenav-item.cur a{
 			background-color: #00a1d6;
 			color: white;
 		}
@@ -57,7 +58,7 @@
 	width: calc(100% - 2rem);
 	float: left;
 	padding: .2rem;
-	border-left: .01rem solid #eaeaea;
+	border-left: .01rem solid #eee;
 }
 
 
@@ -239,7 +240,7 @@
 	position: relative;
 	padding-top: 1.2rem;
 	max-width: 12rem;
-	margin: .7rem auto 0;
+	margin: .66rem auto 0;
 	background-image: url(/root/site/bg/spacebg.png);
 	background-position: center center;
 	background-size: cover;

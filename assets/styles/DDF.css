@@ -321,7 +321,7 @@
 	border-color: #555;
 }
 .DDF .type-selector div.cur,.DDF .dynamic-launch button:hover,/*2*/
-.DDF .sidenav-list .sidenav-item.cur,.DDF .sidenav-list .sidenav-item:hover,.DDF .draft-list-item .draft-type,
+.DDF .sidenav-list .sidenav-item.cur a,.DDF .sidenav-list .sidenav-item a:hover,.DDF .draft-list-item .draft-type,
 .DDF .s-link-list h4/*5*/
 {
 	background: #555;
@@ -335,7 +335,7 @@
 }
 .DDF .memo textarea,/*1*/
 .DDF .type-selector div,.DDF .dynamic-launch button,
-.DDF .sidenav-list .sidenav-item,.DDF .admin-nav-item,
+.DDF .sidenav-list .sidenav-item a,.DDF .admin-nav-item,
 .DDF .auto-textarea-wrapper .auto-textarea-input,
 .DDF .draft-content.empty:after,.DDF .album-content.empty:after,.DDF .section-content.empty:before
 {
