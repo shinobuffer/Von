@@ -13,6 +13,7 @@ export default {
 			let renderer = new marked.Renderer();
 			renderer.heading = (text) => `<p>${text}</p>`;
 			renderer.hr = () => '';
+			renderer.del = () => `▇▇`;
 			renderer.table = () => '';
 			renderer.tablerow = () => '';
 			renderer.tablecell = () => '';

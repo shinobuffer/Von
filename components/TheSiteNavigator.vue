@@ -95,11 +95,9 @@ export default {
   },
   computed:{
     navClass(){
-      //{home:$route.name==='index'&&scrollTop<200&&!isOpened&&screenWidth>=1000,reachTop:scrollTop<200&&!$route.meta.nh&&!isMasked,pinned:upping||scrollTop<200}
-      // TODO: 填充 reachTop 正则
       return{
         home:this.$route.name==='index' && this.scrollTop<200 && !this.isOpened && this.screenWidth>=1000,
-        reachTop:this.scrollTop<200 && /^(ww)/.test(this.$route.name) && !this.isMasked,
+        reachTop:this.scrollTop<200 && !/^(space|search|archive-type-id|note-id|bangumi|dynamic|about|series)/.test(this.$route.name) && !this.isMasked,
         pinned:this.upping||this.scrollTop<200
       }
     },

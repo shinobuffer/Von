@@ -7,24 +7,29 @@
 	opacity: 0;
 	transform: translateY(-.7rem);
 }
-	.draft-head a{
-		margin-left: .1rem;
-	}
-	.draft-head i{
-		font-size: .2rem;
-		transition: .5s ease;
-	}
-	.draft-head i:hover{
-		color: #00a1d6;
-	}
+	.draft-head .draft-add-btn{
+    display: inline-block;
+    background: #eee;
+    height: .2rem;
+    width: .2rem;
+    margin-left: .1rem;
+    line-height: .2rem;
+    color: #666;
+    text-align: center;
+    border-radius: .04rem;
+    transition: .3s;
+  }
+  .draft-head .draft-add-btn:hover{
+    background: #ddd;
+  }
 .draft-list{
 	margin-bottom: .2rem;
 	position: relative;
 }
 .draft-list-item{
 	width: 100%;
-	padding: .15rem 0;
-	font-size: .13rem;
+	padding: .1rem 0;
+	font-size: .12rem;
 	border-bottom: .01rem solid #eaeaea;
 	text-align: left;
 	transition: .5s ease;
@@ -32,16 +37,18 @@
 .draft-list-item:last-child{
 	border-bottom: none;
 }
-	.draft-list-item .row1{
-		margin-bottom: .05rem;
-	}
 	.draft-list-item .draft-type{
+    display: inline-block;
 		background: #00abe0;
 		color: white;
 		border-radius: .03rem;
-		padding: .02rem .05rem;
+		padding: 0 .05rem;
+    vertical-align: middle;
 		margin-right: .07rem;
 	}
+  .draft-list-item .draft-id{
+    color: #ddd;
+  }
 	.draft-list-item .row1 a{
 		font-size: .16rem;
 		vertical-align: middle;
@@ -67,6 +74,7 @@
 .a-table-wrap{
 	max-height: 5.5rem;
 	overflow:auto;
+  overscroll-behavior: contain;
 }
 .a-table{
 	display: table;
@@ -128,7 +136,7 @@
 	}
 	.a-table-row .operate button.del{
 		background: #ffd2db;
-		color: #6d757a;
+		color: #ff5678;
 	}
 
 

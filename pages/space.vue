@@ -27,7 +27,7 @@
           <div class="n-tab-link">
             <nuxt-link to="/space" class="n-btn"><span class="iconfont icon-home"></span><span class="n-title">首页</span></nuxt-link>
             <nuxt-link to="/space/dynamic" class="n-btn"><span class="iconfont icon-dongtai"></span><span class="n-title">动态</span></nuxt-link>
-            <nuxt-link to="/space/launch" class="n-btn"><span class="iconfont icon-launch"></span><span class="n-title">发布</span></nuxt-link>
+            <nuxt-link to="/space/content" class="n-btn"><span class="iconfont icon-launch"></span><span class="n-title">内容</span></nuxt-link>
             <nuxt-link to="/space/album" class="n-btn"><span class="iconfont icon-album"></span><span class="n-title">相册</span></nuxt-link>
             <nuxt-link to="/space/setting" class="n-btn"><span class="iconfont icon-gear"></span><span class="n-title">设置</span></nuxt-link>
           </div>

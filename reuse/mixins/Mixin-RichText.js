@@ -173,9 +173,9 @@ export default {
 					copyBtn.onclick = (e) => {
 						let flag = copyText(e.target.previousElementSibling.innerText);
 						if (flag)
-							vm.context.$store.commit('infoBox/callInfoBox',{info:'代码拷贝成功', ok:true, during:2000});
+							vm.context.$store.dispatch('infoBox/callInfoBox',{info:'代码拷贝成功', ok:true, during:2000});
 						else
-							vm.context.$store.commit('infoBox/callInfoBox',{info:'代码拷贝失败', ok:false, during:2000});
+							vm.context.$store.dispatch('infoBox/callInfoBox',{info:'代码拷贝失败', ok:false, during:2000});
 					};
 					e.parentElement.appendChild(copyBtn);
 
