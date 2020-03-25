@@ -875,24 +875,24 @@ blockquote>:last-child{
 
 /*==================================================================*/
 /*info-box*/
-.fadedown-enter-active{
-	animation: infobox-fadeDown .5s cubic-bezier(.25,.46,.45,.94);
+.info-box-enter-active,.info-box-leave-active{
+	transition: .5s cubic-bezier(.25,.46,.45,.94);
 }
-.fadedown-leave-active{
-	animation: infobox-fadeDown .5s cubic-bezier(.25,.46,.45,.94) reverse;
+.info-box-enter,.info-box-leave-to{
+  transform: translate(-50%,-.4rem) !important;
+  opacity: 0;
 }
 .info-box{
 	position: fixed;
 	top: 0;
 	left: 50%;
-	height: .7rem;
+	height: .4rem;
 	min-width: 1.5rem;
-	color: white;
-	padding: 0 .25rem;
-	line-height: .7rem;
-	border-bottom-right-radius: .05rem;
-	border-bottom-left-radius: .05rem;
-	transform: translateX(-50%);
+	color: #fff;
+	padding: 0 .2rem;
+	line-height: .4rem;
+  border-radius: .04rem;
+	transform: translate(-50%,.1rem);
 	z-index: 2000;
 }
 .info-box h4{

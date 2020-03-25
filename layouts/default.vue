@@ -3,6 +3,7 @@
     <the-site-navigator/>
     <nuxt class="site-wrapper"/>
     <the-site-footer/>
+    <popup-info-box/>
     <luminous-box/>
   </div>
 </template>
@@ -12,11 +13,13 @@ import {mapState} from 'vuex';
 import TheSiteNavigator from '../components/TheSiteNavigator';
 import TheSiteFooter from '../components/TheSiteFooter';
 import LuminousBox from '../components/LuminousBox';
+import PopupInfoBox from '../components/PopupInfoBox';
 export default {
   components: {
     TheSiteFooter,
     TheSiteNavigator,
-    LuminousBox
+    LuminousBox,
+    PopupInfoBox
   },
   data(){
     return{

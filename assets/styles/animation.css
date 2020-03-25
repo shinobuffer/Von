@@ -2,16 +2,6 @@
 	from{transform: translateY(0) scaleX(2) translateX(-50%);}
 	to{transform: translateY(.1rem) scaleX(2) translateX(-50%);}
 }
-@keyframes infobox-fadeDown {
-	0%{
-		opacity: 0;
-		transform: translate(-50%,-.7rem);
-	}
-	100%{
-		opacity: 1;
-		transform: translate(-50%,0);
-	}
-}
 @keyframes fadeInUp {
 	0%{
 		opacity: 0;
