@@ -900,6 +900,39 @@ blockquote>:last-child{
 }
 
 /*==================================================================*/
+/*ddf-popup*/
+.ddf-popup-enter-active{
+  animation: extend 1s cubic-bezier(.25,.46,.45,.94);
+}
+.ddf-popup-leave-active{
+  animation: fadeOut .5s cubic-bezier(.25,.46,.45,.94);
+}
+.ddf-suggest{
+  position: fixed;
+  bottom: .2rem;
+  left: 50%;
+  transform: translate(-50%,0);
+  height: .4rem;
+  line-height: .4rem;
+  width: 2rem;
+  border-radius: .4rem;
+  background: #00000099;
+  box-shadow: 0 .05rem .1rem #1e1e1e80;
+  user-select: none;
+  overflow: hidden;
+  white-space: nowrap;
+  transform-origin: bottom right;
+  z-index: 1900;
+}
+.ddf-suggest span{
+  margin: 0 .1rem;
+  color: #ccc;
+}
+.ddf-suggest button{
+  color: #5abebc;
+}
+
+/*==================================================================*/
 /*defaults&suffixes*/
 *{
 	box-sizing: border-box;
@@ -1043,7 +1076,6 @@ input::-webkit-search-cancel-button{
 	color: #1e1e1e;
 	/*color: #2c3e50;*/
 	font-size: .16rem;
-	/*background: #f1f4f7;测试*/
 }
 /*测试*/
 .site-wrapper,#app.bg-no-rep,#mobile-app.bg-no-rep{

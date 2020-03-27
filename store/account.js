@@ -4,7 +4,8 @@ export const state = ()=>({
   name:'???',
   avatar:'/static/images/passerby.png',
   token:'',
-  loginStatus:false
+  loginStatus:false,
+  expire:false
 });
 
 export const mutations = {
@@ -29,5 +30,8 @@ export const mutations = {
     state.name = '???';
     state.avatar = '/static/images/passerby.png';
     state.loginStatus = false;
+  },
+  expire(state,s){
+    state.expire = s;
   }
 };

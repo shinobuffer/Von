@@ -50,7 +50,7 @@
 
     <div class="header-nav no-select" v-show="screenWidth>=1000">
       <div class="site-brand pl">
-        <nuxt-link :to="loginStatus?'/space':'/about'">
+        <nuxt-link :to="loginStatus?'/space':'/'">
           <span class="oshino"><ruby>忍野<rp>(</rp><rt>おしの</rt><rp>)</rp></ruby></span>
           <span class="nyanya">ニャ</span>
         </nuxt-link>

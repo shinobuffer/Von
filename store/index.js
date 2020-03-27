@@ -1,6 +1,6 @@
 import {getCookieFromStr} from "../utils/storageManager";
 export const state = ()=>({
-  platform:'',
+  platform:'PC',
   isMobile:false,
   scrollTop:process.client?(window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop):0,
   screenHeight:process.client?(window.innerHeight || document.documentElement.clientHeight):902,
@@ -38,6 +38,13 @@ export const mutations = {
 
 export const actions = {
   nuxtServerInit({commit},{app,req}){
+    let USER_UA = req.headers['user-agent'];
+    let UAS = ["SymbianOS", "Window Phone", "Android", "iPad", "PlayBook", "iPhone", "BB10", "BlackBerry", "Mobile"];
+    for (let i = 0; i < UAS.length; i++)
+      if (USER_UA.toLowerCase().indexOf(UAS[i].toLowerCase()) > -1){
+        commit('platformInit',{platform:UAS[i],isMobile:true});
+        break
+      }
     // 接受到页面请求，首先尝试自动登录填充登录信息供鉴权
     let token = req.headers.cookie && getCookieFromStr('utk',req.headers.cookie);
     if (token)
@@ -47,6 +54,8 @@ export const actions = {
             token:token,
             ...res.data.data
           });
+        else
+          commit('account/expire',true)
       })
   }
 };

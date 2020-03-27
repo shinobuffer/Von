@@ -14,6 +14,7 @@
       <section>
         <p>Support:</p>
         <a href="https://vuejs.org" title="Vue" target="_blank" rel="nofollow" ><img src="/static/logo/vue.png" height="20" alt="frame"></a>
+        <a href="https://nuxtjs.org" title="Nuxt" target="_blank" rel="nofollow" ><img src="/static/logo/nuxt.png" height="20" alt="ssr"></a>
         <a href="https://www.vultr.com/?ref=7572602" title="Vultr" target="_blank" rel="nofollow" ><img src="/static/logo/vultr.webp" height="20" alt="server"></a>
         <a href="https://www.cloudflare.com" title="cloudflare" target="_blank" rel="nofollow" ><img src="/static/logo/cloudflare.webp" height="20" alt="DNS"></a>
         <a href="https://github.com/MoePlayer/APlayer" title="APlayer" target="_blank" rel="nofollow" ><img src="/static/logo/aplayer.png" height="20" alt="music player"></a>

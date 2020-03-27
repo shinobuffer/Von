@@ -2,6 +2,10 @@
 	from{transform: translateY(0) scaleX(2) translateX(-50%);}
 	to{transform: translateY(.1rem) scaleX(2) translateX(-50%);}
 }
+@keyframes extend {
+  from{width: 0;}
+  to{width: 2rem;}
+}
 @keyframes fadeInUp {
 	0%{
 		opacity: 0;
