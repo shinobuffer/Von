@@ -1,9 +1,11 @@
 .page-content.dynamic{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 	max-width: unset;
 	width: 10rem;
-	padding-top: 1rem ;
+	padding: .8rem 0;
 	background: 0;
-	overflow: hidden;
 }
 .loading-content:before{
 	content: '';
@@ -19,11 +21,15 @@
 /*==================================================================*/
 /*left panel*/
 .dynamic .left-panel{
-	width: 2.5rem;
+	width: 2.6rem;
 }
-.author-sub-panel,.recommend-sub-panel{
+.dynamic .left-panel .scroll-content{
+  position: sticky;
+  top: .8rem;
+}
+.dynamic .left-panel .scroll-content>div{
 	position: relative;
-	background: #fcfaf2;
+	background: #fff;
 	border-radius: .04rem;
 	margin-bottom: .08rem;
 	overflow: hidden;
@@ -118,14 +124,13 @@
 /*==================================================================*/
 /*right panel*/
 .dynamic .right-panel{
-	width: 7.2rem;
-	margin-left: .1rem;
+	width: 7.3rem;
 }
 .publish-sub-panel{
 	padding: .1rem .2rem;
-	margin-bottom: .2rem;
+	margin-bottom: .1rem;
 	border-radius: .04rem;
-	background: #fcfaf2;
+	background: #fff;
 }
 .publish-sub-panel .editor{
 	display: flex;
@@ -187,7 +192,7 @@ img.img-content{
 	border: .01rem solid #eaeaea;
 	border-radius: .04rem;
 	margin-bottom: .1rem;
-	background: #fcfaf2;
+	background: #fff;
 }
 .d-card .author-avatar{
 	position: absolute;

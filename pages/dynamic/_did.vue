@@ -2,37 +2,38 @@
   <div style="background-image: url(/root/site/bg/dynamicbg.png)">
     <div class="page-content-wrap">
       <div class="page-content dynamic fc">
-        <div class="left-panel pl">
-          <div class="author-sub-panel">
-            <div class="loading-content h-1p5" v-if="loading"></div>
-            <div class="content tl" v-else>
-              <div class="author-pic"></div>
-              <p class="fzz">
-                <nuxt-link to="/about" class="author-namae">{{authorInfo.author}}</nuxt-link>
-                <span class="author-status no-select" :style="{background:statusMap[status].color}"><i class="iconfont" :class="statusMap[status].icon"></i>{{statusMap[status].des}}</span>
-                <span class="author-sign">{{authorInfo.signature}}</span>
-              </p>
-              <div class="author-statistics tc">
-                <nuxt-link to="/archive" class="cell"><p>{{statistics['aCount']}}</p><span>文章</span></nuxt-link>
-                <nuxt-link to="/note" class="cell"><p>{{statistics['nCount']}}</p><span>笔记</span></nuxt-link>
-                <nuxt-link to="/dynamic" class="cell"><p>{{statistics['dCount']}}</p><span>动态</span></nuxt-link>
+        <div class="left-panel">
+          <div class="scroll-content">
+            <div class="author-sub-panel">
+              <div class="loading-content h-1p5" v-if="loading"></div>
+              <div class="content tl" v-else>
+                <div class="author-pic"></div>
+                <p class="fzz">
+                  <nuxt-link to="/about" class="author-namae">{{authorInfo.author}}</nuxt-link>
+                  <span class="author-status no-select" :style="{background:statusMap[status].color}"><i class="iconfont" :class="statusMap[status].icon"></i>{{statusMap[status].des}}</span>
+                  <span class="author-sign">{{authorInfo.signature}}</span>
+                </p>
+                <div class="author-statistics tc">
+                  <nuxt-link to="/archive" class="cell"><p>{{statistics['aCount']}}</p><span>文章</span></nuxt-link>
+                  <nuxt-link to="/note" class="cell"><p>{{statistics['nCount']}}</p><span>笔记</span></nuxt-link>
+                  <nuxt-link to="/dynamic" class="cell"><p>{{statistics['dCount']}}</p><span>动态</span></nuxt-link>
+                </div>
+                <span class="author-avatar"><img alt="author" :src="authorInfo.avatar"></span>
               </div>
-              <span class="author-avatar"><img alt="author" :src="authorInfo.avatar"></span>
             </div>
-          </div>
-
-          <div class="recommend-sub-panel tl">
-            <p class="title">推荐所</p>
-            <div class="loading-content h-p5" v-if="loading"></div>
-            <div class="recommend-list" v-else>
-              <a v-for="item in recommendations"
-                 target="_blank" :title="item.title"
-                 :key="item.id" :href="item.url">{{item.title}}</a>
+            <div class="recommend-sub-panel tl">
+              <p class="title">推荐所</p>
+              <div class="loading-content h-p5" v-if="loading"></div>
+              <div class="recommend-list" v-else>
+                <a v-for="item in recommendations"
+                   target="_blank" :title="item.title"
+                   :key="item.id" :href="item.url">{{item.title}}</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="right-panel pl">
+        <div class="right-panel">
           <div class="publish-sub-panel">
             <span>目前没卵用的 input</span>
             <div class="editor">
@@ -62,7 +63,7 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex';
+import {mapState,mapGetters} from 'vuex';
 import UCONF from "~/config/user.conf";
 import DynamicCard from '~/components/DynamicCard';
 const {siteTitle:{title},statusMap} = UCONF;
@@ -137,7 +138,8 @@ export default {
     }
   },
   computed:{
-    ...mapGetters(['xAboveBottom'])
+    ...mapGetters(['xAboveBottom']),
+    ...mapState(['screenHeight','scrollTop'])
   },
   watch:{
     xAboveBottom(cur){

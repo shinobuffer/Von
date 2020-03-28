@@ -90,7 +90,7 @@ export default {
         {class:'iconfont icon-star',des:'kira'}
       ],
       themeType:1,
-      back2topImg:`/static/images/b2t/back2top${randInt(1,5)}.png`,
+      back2topImg:`/static/images/b2t/back2top${randInt(1,7)}.png`,
       ddfShow:false
     }
   },

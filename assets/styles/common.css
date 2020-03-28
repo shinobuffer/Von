@@ -1152,7 +1152,7 @@ input::-webkit-search-cancel-button{
 }
 .back2top{
 	position: fixed;
-	transform: translate(1.1rem,0);
+	transform: translate(110%,0);
 	font-size: 0;
 	opacity: .66;
 	bottom: .4rem;
