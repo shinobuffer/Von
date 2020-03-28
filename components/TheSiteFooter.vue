@@ -1,5 +1,5 @@
 <template>
-  <footer class="site-footer" v-show="!/^(login|takenote|write|error)/.test($route.name||'error')">
+  <footer class="site-footer" v-show="!/^(login|takenote|write)/.test($route.name)">
     <div class="site-info">
       <section>
         <p>• 单身为狗 {{age}} 年</p>

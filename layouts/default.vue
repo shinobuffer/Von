@@ -14,7 +14,7 @@
        v-if="!isMobile"
        :class="{visible:scrollTop>500&&!/^(takenote|write)/.test($route.name)}"
        @click="back2top">
-      <img :src="back2topImg" width="100" alt="back2top">
+      <img :src="back2topImg" height="150" alt="back2top">
     </a>
     <button class="mobile-back2top"
             v-else
@@ -143,7 +143,6 @@ export default {
     }
   },
   beforeMount(){
-    console.info("%c Github %c","background:#24272A; color:#ffffff","","https://github.com/Bersder");
     if (this.expire){
       delCookie('utk');
       this.$store.commit('account/expire',false);
@@ -224,27 +223,4 @@ export default {
 </script>
 
 <style>
-  @font-face {
-    font-family: 'Fira Code VF';
-    src: url('/static/fonts/FiraCode-VF.woff') format('woff-variations'), url("/static/fonts/FiraCode-VF.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-  }
-  #mobile-app .content-area{
-    font-size: .15rem;
-  }
-  .serif .fc,.serif .comment-content,.serif .markdown-body{
-    font-family: 'Noto Serif SC',sans-serif;
-  }
-  .text-input{
-    background: transparent;
-    outline: none;
-    border: none;
-    color: #6c6c6c;
-    text-align: center;
-  }
-  .text-input:focus{
-    color: black;
-  }
 </style>
-

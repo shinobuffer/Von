@@ -1,6 +1,5 @@
 <template>
-  <div style="background-image: url(/root/site/bg/dynamicbg.png)"
-       :style="{minHeight:`${screenHeight}px`}">
+  <div style="background-image: url(/root/site/bg/dynamicbg.png)">
     <div class="page-content-wrap">
       <div class="page-content dynamic fc">
         <div class="left-panel pl">
@@ -138,8 +137,7 @@ export default {
     }
   },
   computed:{
-    ...mapGetters(['xAboveBottom']),
-    screenHeight(){return this.$store.state.screenHeight}
+    ...mapGetters(['xAboveBottom'])
   },
   watch:{
     xAboveBottom(cur){

@@ -327,10 +327,18 @@
 		padding: .1rem .15rem;
 	}
 		.search-box-m input{
+      background: transparent;
+      outline: none;
+      border: none;
+      color: #6c6c6c;
+      text-align: center;
 			font-size: .14rem;
 			line-height: .2rem;
 			width: 80%;
 		}
+    .search-box-m input:focus{
+      color: inherit;
+    }
 		.search-box-m button{
 			vertical-align: top;
 			font-size: .2rem;

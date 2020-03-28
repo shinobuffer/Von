@@ -155,7 +155,7 @@
 .DDF .nav-icon span,.DDF .reachTop .nav-icon span{
 	background: #ccc;
 }
-.DDF .menu li a,.DDF .nav-menu a,.DDF .text-input:focus{
+.DDF .menu li a,.DDF .nav-menu a{
 	color: #ccc;
 }
 .DDF .menu li a:hover{
