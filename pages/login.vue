@@ -31,12 +31,14 @@
 import {mapState} from 'vuex';
 import {aesEncrypt} from '~/utils/crypto';
 import Validator from '~/utils/Validator';
+import UCONF from '~/config/user.conf';
+const {siteTitle:{title}} = UCONF;
 export default {
   name:"login",
   middleware:'notauth',
   head(){
     return{
-      title:'Sign In | 忍野喵'
+      title:`Sign In | ${title}`
     }
   },
   data(){

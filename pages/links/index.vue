@@ -92,10 +92,12 @@
 
 <script>
 import CommentModule from '~/components/CommentModule';
+import UCONF from '~/config/user.conf';
+const {siteTitle:{title}} = UCONF;
 export default {
   head(){
     return{
-      title:'友链 | 忍野喵'
+      title:`友链 | ${title}`
     }
   },
   components:{

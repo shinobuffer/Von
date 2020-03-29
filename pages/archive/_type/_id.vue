@@ -41,7 +41,7 @@
               <div class="post-reward"></div><!--暂不开发-->
               <div class="post-copyright">
                 <div class="post-copyright-author tl">
-                  <span class="pck">文章作者：</span><span class="pcv">忍野ニャ</span>
+                  <span class="pck">文章作者：</span><span class="pcv">{{author}}</span>
                 </div>
                 <div class="post-copyright-link tl">
                   <span class="pck">文章链接：</span><span class="pcv">{{xurl}}</span>
@@ -227,7 +227,7 @@ export default {
       title:'',
       preview:'',
       imgSrc:'/static/images/loading.gif',
-      author:'oshino',
+      author:'忍野ニャ',
       time:'1111-11-11',
       lut:'1111-11-11 11:11:11',
       tags:[],

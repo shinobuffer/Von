@@ -71,7 +71,7 @@
                 <span>More</span>
               </div>
             </div>
-            <div class="pager-no-more" v-if="curNotes.length>=noteNum&&!noteWaiting">没有更多啦( *・ω・)✄╰ひ╯</div>
+            <div class="pager-no-more" v-else>没有更多啦( *・ω・)✄╰ひ╯</div>
           </div>
         </div>
         <div class="content-aside-n">
@@ -84,10 +84,12 @@
 
 <script>
 import {mapGetters} from 'vuex';
+import UCONF from '~/config/user.conf';
+const {siteTitle:{title}} = UCONF;
 export default {
   head(){
     return{
-      title:'笔记 | 忍野喵'
+      title:`笔记 | ${title}`
     }
   },
   filters:{

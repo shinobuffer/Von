@@ -50,11 +50,11 @@
 
 <script>
 import UCONF from "~/config/user.conf";
-const {siteHistory} = UCONF;
+const {siteTitle:{title},siteHistory} = UCONF;
 export default {
   head(){
     return{
-      title:'关于 | 忍野喵'
+      title:`关于 | ${title}`
     }
   },
   asyncData({app,req}){

@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import {mapState,mapGetters} from 'vuex';
+import {mapGetters} from 'vuex';
 import UCONF from "~/config/user.conf";
 import DynamicCard from '~/components/DynamicCard';
 const {siteTitle:{title},statusMap} = UCONF;
@@ -138,8 +138,7 @@ export default {
     }
   },
   computed:{
-    ...mapGetters(['xAboveBottom']),
-    ...mapState(['screenHeight','scrollTop'])
+    ...mapGetters(['xAboveBottom'])
   },
   watch:{
     xAboveBottom(cur){
