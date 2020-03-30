@@ -28,7 +28,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'a personal blog for ACG lover' },
+      { hid: 'description', name: 'description', content: '忍野喵的温馨破窝' },
       { hid: 'keywords', name: 'keywords', content: '忍野喵,oshinonya,ACGN,coding,二次元,动漫,游戏,极客,jojo,东方Project,Fate,明日方舟' }
     ],
     link: [
@@ -41,7 +41,11 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Serif+SC:500,700&display=swap&subset=chinese-simplified,cyrillic' },
     ]
   },
-  css:['~assets/styles/index.css','aplayer/dist/APlayer.min.css','mavon-editor/dist/css/index.css'],
+  css:[
+    '~assets/styles/index.css',
+    'aplayer/dist/APlayer.min.css',
+    'mavon-editor/dist/css/index.css'
+  ],
   plugins:[
     '~plugins/http.js',
     '~plugins/prototype.js',
@@ -62,7 +66,8 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    extractCSS: { allChunks: true },//提取样式输出整个css
+    extractCSS: true,//提取样式输出整个css
+
     /*
     ** Run ESLint on save
     */

@@ -146,6 +146,7 @@ export default {
     if (this.expire){
       delCookie('utk');
       this.$store.commit('account/expire',false);
+      this.$store.dispatch('infoBox/callInfoBox',{info:'登录过期，请重登', ok:false, during:3000});
     }
     //获取ddf设置
     let DDF = getCookie('darken');

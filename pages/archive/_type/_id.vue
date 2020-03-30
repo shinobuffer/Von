@@ -55,7 +55,8 @@
               <div class="post-bot">
                 <div class="post-tags">
                   <i class="iconfont icon-tags"></i>
-                  <ul>
+                  <span v-if="!tags.length" style="margin-left: .25rem;vertical-align: middle">NO TAGS</span>
+                  <ul v-else>
                     <li class="tag" v-for="(tag,index) in tags" :key="index"><nuxt-link :to="'/tags/'+tag" rel="tag">{{tag}}</nuxt-link></li>
                   </ul>
                 </div>

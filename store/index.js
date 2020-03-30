@@ -17,7 +17,7 @@ export const mutations = {
     state.isMobile = payload.isMobile;
   },
   scrollTopC(state,cur){
-    if (Math.abs(state.scrollTop - cur)>50)
+    if (Math.abs(state.scrollTop - cur)>100)
       state.upping = (state.scrollTop > cur);
     state.scrollTop = cur
   },

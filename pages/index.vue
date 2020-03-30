@@ -13,7 +13,7 @@
                   <img v-lazyload="[`/root${item.imgSrc}`,`/root${item.imgSrc}.thumb`]">
                   <div class="float-preview fc tl">
                     <h3 :title="item.title">{{item.title}}</h3>
-                    {{item.preview}}
+                    <p>{{item.preview}}</p>
                   </div>
                 </nuxt-link>
               </div>
