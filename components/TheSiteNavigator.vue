@@ -14,12 +14,12 @@
       <div class="nav-m-mask" @click="isOpened=!isOpened" v-show="isOpened" :style="{height:screenHeight-50+'px'}"></div>
       <div class="nav-aside" :class="{open:isOpened}" :style="{height:screenHeight-50+'px'}">
         <div class="nav-avatar">
-          <nuxt-link :to="loginStatus?'/space':'/about'"><img src="/root/uploads/avatar/me"></nuxt-link>
-          <span class="me-status" :title="'STATUS:'+statusMap[meStatus].des" :style="{background:statusMap[meStatus].color}">
+          <nuxt-link :to="loginStatus?'/space':'/about'"><img :src="meAvatar" alt="my avatar"></nuxt-link>
+          <span class="me-status" :title="statusMap[meStatus].des" :style="{background:statusMap[meStatus].color}">
             <i class="iconfont" :class="statusMap[meStatus].icon"></i>
           </span>
         </div>
-        <p class="me-name">忍野喵</p>
+        <p class="me-name">{{meName}}</p>
         <p class="me-sign">{{meSign}}</p>
         <p class="cut-line"></p>
 
@@ -88,7 +88,9 @@ export default {
 
       isOpened:false,
       searchKey:'',
-      meSign:'如果你看到了这个，提醒我今晚吃烤鸽子',
+      meName:'???',
+      meAvatar:'/static/images/passerby.png',
+      meSign:'这个人懒成了鸽子',
       meStatus:0,
       statusMap:UCONF.statusMap
     }
@@ -110,10 +112,12 @@ export default {
     })
   },
   created(){
-    this.$fetch('/apis/apiv0.php').then(response=>{
-      let data = response.data.data;
-      this.meSign = data.info.sign;
-      this.meStatus = data.info.status
+    this.$fetch('/apis/apiv0.php').then(res=>{
+      let {name,avatar,sign,status} = res.data.data.info;
+      this.meName = name;
+      this.meAvatar = avatar;
+      this.meSign = sign;
+      this.meStatus = status
     })
   },
   watch:{

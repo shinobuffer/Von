@@ -23,6 +23,7 @@
 	padding: .2rem .25rem;
 	background: rgba(255,255,255,.5);
 	border-radius: .05rem;
+  color: #333;
 	text-align: left;
 }
 	.login h1{
@@ -30,7 +31,7 @@
 		margin-bottom: .2rem;
 	}
 	.login label{
-		color: #494949;
+		color: #555;
 		font-size: .14rem;
 	}
 	.login input{

@@ -7,7 +7,7 @@
         <p>• Alive: {{day}} 天 {{hour}} 小时 {{min}} 分 {{sec}} 秒</p>
       </section>
       <section>
-        <p>• <a href="https://github.com/Bersder/nameless-blog" target="_blank">Nameless {{ver}}</a></p>
+        <p>• Blog <a href="https://github.com/Bersder/nameless-blog" target="_blank">Von {{ver}}</a></p>
         <p>• Powered By <a href="https://github.com/Bersder" target="_blank">Bersder</a></p>
         <p><a href="mailto:oshinoNya@outlook.com">• oshinoNya@outlook.com</a></p>
       </section>
