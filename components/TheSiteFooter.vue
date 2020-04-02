@@ -7,7 +7,7 @@
         <p>• Alive: {{day}} 天 {{hour}} 小时 {{min}} 分 {{sec}} 秒</p>
       </section>
       <section>
-        <p>• Blog <a href="https://github.com/Bersder/nameless-blog" target="_blank">Von {{ver}}</a></p>
+        <p>• Blog <a :href="repoUrl" target="_blank">Von {{ver}}</a></p>
         <p>• Powered By <a href="https://github.com/Bersder" target="_blank">Bersder</a></p>
         <p><a href="mailto:oshinoNya@outlook.com">• oshinoNya@outlook.com</a></p>
       </section>
@@ -27,13 +27,14 @@
 <script>
 import UCONF from "../config/user.conf";
 import PCONF from "../config/project.conf";
-const {version} = PCONF;
+const {repositories,version} = PCONF;
 const {sinceTime,birthday} = UCONF;
 export default {
   name: "TheSiteFooter",
   data(){
     return{
       since:sinceTime,
+      repoUrl:repositories,
       ver:version,
       fromY:new Date(sinceTime).getFullYear(),
       toY:new Date().getFullYear(),

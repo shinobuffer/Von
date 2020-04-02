@@ -866,6 +866,11 @@ blockquote>:last-child{
 	overflow-x: auto;
 	overflow-y: hidden;
 }
+.publish-area .v-note-wrapper .content-input-wrapper,
+.publish-area .content-input-wrapper .auto-textarea-wrapper
+{
+  background: 0 !important;
+}
 /*.publish-area .v-note-wrapper,.publish-area .v-note-op{*/
 /*	background: rgba(255,255,255,.8) !important;*/
 /*}*/

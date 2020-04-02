@@ -61,10 +61,10 @@
 	padding: .1rem .05rem;
 }
 .publish-area{
-	padding:.1rem .2rem;
+	padding:.1rem .5rem;
 }
 .pa-unit{
-	margin-bottom: .1rem;
+	margin-bottom: .05rem;
 	position: relative;
 }
 #mobile-app .pa-unit.detail-select>div{
@@ -250,7 +250,6 @@
 					border-color: #00a1d6;
 				}
 .pa-submit{
-	text-align: right;
 	margin-top: .1rem;
 }
 #mobile-app .pa-submit{

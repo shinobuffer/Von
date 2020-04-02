@@ -160,7 +160,7 @@ export default {
     this.themeType = TT?parseInt(TT):1;
   },
   mounted(){
-    this.musicInit();
+    !this.isMobile && this.musicInit();
     let h = new Date().getHours();
     if (!this.darken&&(h < 6 || h > 20)){
       this.ddfShow = true;

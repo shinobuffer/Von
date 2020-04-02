@@ -1,7 +1,7 @@
 export default {
   name:'Von',
 	version:'v1.2.0',
-  repositories:'https://github.com/Bersder/VonoV',
+  repositories:'https://github.com/Bersder/Von',
 	navList:[
 		{key:'1',icon:'iconfont icon-archive',des:'归档',animate:'rotate-bf',subs:[
 				{key:'1-1',icon:'iconfont icon-bilibili',des:'Anime',href:'/archive/anime'},
