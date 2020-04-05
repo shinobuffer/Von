@@ -1,7 +1,7 @@
 <template>
   <div class="not-find-404" :style="{height:screenHeight+'px'}">
     <div class="container-404">
-      <h2>... {{statusCode}} NOT FIND ...</h2>
+      <h2>... {{statusCode}} {{statusMessage}} ...</h2>
       <section>
         <p>{{message}}</p>
       </section>
@@ -33,8 +33,11 @@ export default {
     statusCode(){
       return (this.error && this.error.statusCode) || 500
     },
+    statusMessage(){
+      return this.statusCode===500?'INTERNAL ERROR':'NOT FIND'
+    },
     message(){
-      return (this.error && this.error.message) || 'Unknown Error'
+      return this.statusCode===500?'Something wrong happened':((this.error && this.error.message) || 'Unknown Error')
     },
     screenHeight(){
       return this.$store.state.screenHeight;

@@ -100,7 +100,7 @@
 		list-style-type: none;
 	}
 		.update-content a:hover{
-			color: #00a1d6;
+			color: #4e9b99;
 		}
 		.update-content li{
 			display: block;
@@ -147,5 +147,5 @@
 			margin-left: .4rem;
 		}
 			.rc-item a:hover{
-				color: #00a1d6;
+				color: #4e9b99;
 			}

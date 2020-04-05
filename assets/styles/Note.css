@@ -73,7 +73,7 @@
 	transition: .5s ease;
 }
 .panel-n:hover{
-	box-shadow: 0 .01rem .04rem rgba(0,0,0,.5);
+	box-shadow: 0 0 .1rem rgba(0,0,0,.3);
 }
 .panel-n-img{
 	position: relative;

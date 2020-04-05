@@ -151,7 +151,6 @@ export default {
     //获取ddf设置
     let DDF = getCookie('darken');
     this.darken = DDF?parseInt(DDF):0;
-    this.darken && document.body.classList.add('deep');
 
     //尝试获取历史设置记录
     let FF = window.localStorage.getItem('CUR_FONT');
@@ -166,6 +165,7 @@ export default {
       this.ddfShow = true;
       setTimeout(()=>this.ddfShow=false,10000)
     }
+    this.darken && document.body.classList.add('deep');
   },
   methods:{
     async musicInit(){

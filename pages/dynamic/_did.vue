@@ -3,7 +3,7 @@
     <div class="page-content-wrap">
       <div class="page-content dynamic fc">
         <div class="left-panel">
-          <div class="scroll-content">
+          <div class="scroll-content" :style="{top:stickyTop}">
             <div class="author-sub-panel">
               <div class="loading-content h-1p5" v-if="loading"></div>
               <div class="content tl" v-else>
@@ -138,7 +138,10 @@ export default {
     }
   },
   computed:{
-    ...mapGetters(['xAboveBottom'])
+    ...mapGetters(['xAboveBottom']),
+    stickyTop(){
+      return this.$store.state.upping||this.$store.state.scrollTop<200?'.8rem':'.14rem'
+    }
   },
   watch:{
     xAboveBottom(cur){

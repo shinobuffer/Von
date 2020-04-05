@@ -26,6 +26,7 @@
 .dynamic .left-panel .scroll-content{
   position: sticky;
   top: .8rem;
+  transition: .3s;
 }
 .dynamic .left-panel .scroll-content>div{
 	position: relative;

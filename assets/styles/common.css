@@ -282,7 +282,7 @@
 		margin-bottom: .3rem;
 		border-radius: .03rem;
 		background: rgba(252,250,242,.7);
-		box-shadow: 0 .02rem .05rem rgba(0,0,0,.3);
+		box-shadow: 0 .02rem .06rem rgba(0,0,0,.2);
 		transition: all .5s ease-in-out;
 		animation: fadeInDown .6s cubic-bezier(.25,.46,.45,.94);
 	}
@@ -974,11 +974,14 @@ input::-webkit-search-cancel-button{
 	height: .08rem;
 }
 ::-webkit-scrollbar-track{
-	-webkit-box-shadow: inset 0 0 .01rem #b8c0cc;
 	background: #eee;
 }
 ::-webkit-scrollbar-thumb{
-	background-color: #5abebc;
+	background: #5abebc80;
+  border-radius: .04rem;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: #5abebc;
 }
 ::selection {
 	background:rgba(33, 33, 37, 0.6);
@@ -1135,7 +1138,7 @@ input::-webkit-search-cancel-button{
 	width: 100%;
 	border-radius: .05rem;
 	background: rgba(252,250,242,.7);
-	box-shadow: 0 0.02rem 0.05rem rgba(0,0,0,.3);
+	box-shadow: 0 0 0.06rem rgba(0,0,0,.15);
 	margin-bottom: .2rem;
 }
 .mobile-back2top{

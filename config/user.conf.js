@@ -1,8 +1,9 @@
 export default {
   // TODO: 考虑将大部分移动至后端数据库
-  siteURL:'https://oshinonya.com',
+  siteURL:'https://oshinonya.com',//网站域名
 	sinceTime:1573659213000, //网站始于 2019.11.13 23:33:33 GTM+8
 	birthday:'1999-06-05', //生日，用于计算年龄
+  email:'oshinoNya@outlook.com',//联系邮箱
 	statusMap:[
 		{icon:'icon-coffee',des:'享受',color:'#b77d68'},
 		{icon:'icon-focus',des:'不咕鸟',color:'#ff3d44'},
