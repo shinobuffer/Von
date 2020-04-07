@@ -4,3 +4,5 @@ Disallow: /space
 Disallow: /write
 Disallow: /takenote
 Disallow: /search
+Disallow: /downloads
+Disallow: /tags/

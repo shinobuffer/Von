@@ -1,14 +1,14 @@
 <template>
   <div class="panel">
-    <div class="panel-img">
+    <div class="panel-img fzz">
       <nuxt-link :to="article.aid" append>
         <img class="img" v-lazyload="[`/root${article.imgSrc}`,`/root${article.imgSrc}.thumb`]" :alt="article.title">
       </nuxt-link>
     </div>
     <div class="panel-info">
-      <h2 class="title"><nuxt-link class="title" :to="article.aid" append>{{article.title}}</nuxt-link></h2>
-      <p class="preview">{{article.preview}}</p>
-      <p class="cut-line" style="margin: .1rem 0"></p>
+      <h2 class="title ellipsis"><nuxt-link class="title" :to="article.aid" append>{{article.title}}</nuxt-link></h2>
+      <p class="preview ellipsis">{{article.preview}}</p>
+      <p class="cut-line"></p>
       <div class="meta">
         <span class="author"><i class="iconfont icon-geren"></i>{{article.author}}</span>
         <span class="time"><i class="iconfont icon-time"></i>{{article.time|ymd2Mdy}}</span>

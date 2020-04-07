@@ -279,9 +279,6 @@
 		font-size: .12rem;
 		margin-top: .05rem;
 		padding: 0 .15rem;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
 	}
 	.nav-aside .me-status{
 		display: block;

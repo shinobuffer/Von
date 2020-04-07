@@ -100,7 +100,20 @@ ___
 
 然后在项目根目录运行 `npm run build` 打包生成 `.nuxt` 文件夹。将 **.nuxt, nuxt.config.js, package.json, static/static** 上传至服务器网站根目录
 ### Run
-
+到此网站根目录应该如下
+```text
+www_root
+  |--apis/
+  |--downloads/
+  |--music/
+  |--node_modules/
+  |--site/
+  |--static/
+  |--tmp/
+  |--uploads/
+  |--.nuxt/
+  |--
+```
 ## Support
 Nothing Yet
 ## Author
