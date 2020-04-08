@@ -19,7 +19,7 @@
         <div class="archive-list">
           <h2 class="archive-title">归档</h2>
           <span class="archive-title-en">Archives</span>
-          <p style="color: #8b8e99;font-size: .14rem;font-weight: 600">{{this.articles.length-this.noteNum}} 文章 + {{this.noteNum}} 笔记</p>
+          <p style="color: #aaa;font-size: .14rem;font-weight: 600">{{this.articles.length-this.noteNum}} 文章 + {{this.noteNum}} 笔记</p>
           <div class="archives">
             <p class="tr" style="padding: 0 .2rem"><a @click="unfoldAll" href="javascript:void(0);">「展开／折叠」</a></p>
             <div class="years-list" v-for="year in year_ord" :key="year">
@@ -29,8 +29,9 @@
                   <span class="mon"  @click="unfoldMon(year,mon)" >{{mon}}月({{arch_data[year][mon].articles.length}}篇)</span>
                   <ul class="days-list" :id="year+'-'+mon" :style="{height:arch_data[year][mon].articles.length*26+'px'}" >
                     <li v-for="art in arch_data[year][mon].articles" :key="`${art.type}-${art.id}`">
+                      <span class="type" v-if="art.type==='note'">Note</span>
                       <span class="day">{{art.day}}日</span>
-                      <nuxt-link :to="art|toUrl">{{art.title}}<span style="color: #b8c0cc;font-size: .12rem" v-if="art.type==='note'"> · 笔记</span></nuxt-link>
+                      <nuxt-link :to="art|toUrl">{{art.title}}</nuxt-link>
                     </li>
                   </ul>
                 </li>

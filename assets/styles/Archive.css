@@ -19,7 +19,7 @@
 }
 .archives h3{
 	font-size: .25rem;
-	padding-left: 1.5rem;
+	padding-left: 1rem;
 }
 #mobile-app .mons-list{
 	margin-left: 0;
@@ -27,7 +27,7 @@
 .mons-list{
 	position: relative;
 	list-style-type: none;
-	margin-left: 1rem;
+	margin-left: .5rem;
 	padding: .15rem 0;
 }
 .mons-list:before{
@@ -38,7 +38,7 @@
 	top: 0;
 	width: .06rem;
 	height: 100%;
-	background: linear-gradient(to bottom,rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+	background: linear-gradient(to bottom,rgba(222,222,222,0) 0%, rgb(222,222,222) 10%, rgb(222,222,222) 90%, rgba(222,222,222,0) 100%);
 	z-index: 5;
 }
 .ml-item>span{position: relative;cursor: pointer}
@@ -50,7 +50,7 @@
 	width: .15rem;
 	height: .15rem;
 	background: white;
-	border: .03rem solid #FF7D7D;
+	border: .03rem solid #4e9b99;
 	border-radius: .1rem;
 	z-index: 10;
 	box-sizing: border-box;
@@ -63,6 +63,9 @@
 		list-style-type: none;
 		transition: .5s ease-in-out;
 	}
+    #mobile-app .days-list a{
+      font-size: .14rem;
+    }
 		.days-list a{
 			position: absolute;
 			left: .4rem;
@@ -72,10 +75,10 @@
 			white-space: nowrap;
 		}
 		.days-list a:hover{
-			color: #00a1d6;
+			color: #4e9b99;
 		}
 		.days-list .day{
-			color: #FF7D7D;
+			color: #4e9b99;
 		}
 		.ml-item .days-list li:before{
 			position: absolute;
@@ -83,7 +86,13 @@
 			top: .1rem;
 			left: -.16rem;
 			border-radius: .1rem;
-			border: .04rem solid #FF7D7D;
+			border: .04rem solid #4e9b99;
 			box-sizing: border-box;
 			z-index: 10;
 		}
+    .ml-item .days-list li .type{
+      position: absolute;
+      left: -.5rem;
+      color: #bbb;
+      font-size: .12rem;
+    }

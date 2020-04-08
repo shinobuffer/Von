@@ -2,7 +2,7 @@
 > a personal blog for ACG lover
 >>一个基于Vue开发的博客，献给所有热爱ACG，热爱生活的人；也算是给几月来坚持不懈的我的奖赏吧
 
-**该项目为重构优化之后的SSR版本，并且以后也只维护该项目，如对旧项目有需要请转[此处](https://github.com/Bersder/nameless-blog)**
+**该项目为重构优化之后的SSR版本，并且以后也只维护该项目，如对旧项目（SPA版本）有需要请转[此处](https://github.com/Bersder/nameless-blog)**
 ## Introduction
 整个博客（下称Von）前端完全基于 Vue+Nuxt 开发，后端接口层 php 实现
 
@@ -25,9 +25,9 @@ Von 有如下特点
 后端需要 LNPM 环境，网上的一键安装应该也可以吧（没试过），如果你也喜欢折腾，可以参考[这篇文章](https://oshinonya.com/archive/code/2)
 
 LNPM 部署并配置好后
-- 执行脚本初始化数据库
-- 在网站根目录（默认html）中解压该压缩包以初始化文件资源
-- 下载对应版本的后端代码放在网站根目录，重命名为`apis`，并按照要求进行配置
+- 执行sql脚本（见后端项目）初始化数据库
+- 在网站根目录中解压该压缩包以初始化文件资源
+- 下载对应版本的后端代码放在网站根目录，重命名为`apis`，并[按照要求进行配置](https://github.com/Bersder/Von-backend)
 
 接下来安装 nodejs，很简单这里就跳过了，下面给出之后要安装的模块
 ```bash
@@ -98,7 +98,9 @@ ___
 - 修改 `pages/about/index.vue` 的模板（关于页面）
 - 修改 `pages/links/index.vue` 的模板（友链页面）
 
-然后在项目根目录运行 `npm run build` 打包生成 `.nuxt` 文件夹。将 **.nuxt, nuxt.config.js, package.json, static/static** 上传至服务器网站根目录
+**对整个项目除`nuxt.config.js`的所有文件进行正则替换，把`'/root'\+|/root`替换为空（共46个分布在27个文件中）**
+
+然后在项目根目录执行 `npm run build` 打包生成 `.nuxt` 文件夹。将 **.nuxt, nuxt.config.js, package.json, static/static** 上传至服务器网站根目录
 ### Run
 到此网站根目录应该如下
 ```text

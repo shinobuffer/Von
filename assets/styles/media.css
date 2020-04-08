@@ -28,11 +28,9 @@
 	}
 }
 @media screen and (max-width: 999px){
-	.page-img{
-		height: 3rem;
-	}
 	.page-info .intro{
-		font-size: .3rem;
+		font-size: .26rem;
+    margin-bottom: 0;
 	}
 	.page-content.note{ /*note特有*/
 		padding: 0;
@@ -85,7 +83,7 @@
 	}
 /*-----------------------------------------*/
 	.page-img{
-		height: 2.5rem;
+		height: 2rem;
 	}
 }
 @media screen and (max-width: 750px){

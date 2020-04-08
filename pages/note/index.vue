@@ -33,9 +33,6 @@
                 <span class="item-num">{{index_|twoNum}}</span>
                 <span class="item-name">
 									<nuxt-link :to="item_.nid" class="item-link" append>{{item_.title}}</nuxt-link>
-                  <span class="item-tag" v-for="tag in item_.tags" :key="tag">
-                    <a :href="'/tags/'+tag">{{tag}}</a>
-                  </span>
 								</span>
                 <span class="item-date">{{item_.time.substr(0,10)}}</span>
               </div>

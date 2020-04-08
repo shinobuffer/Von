@@ -1,6 +1,6 @@
 export default {
   name:'Von',
-	version:'v1.2.0',
+	version:'v1.2.1',
   repositories:'https://github.com/Bersder/Von',
 	navList:[
 		{key:'1',icon:'iconfont icon-archive',des:'归档',animate:'rotate-bf',subs:[

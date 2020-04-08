@@ -28,8 +28,10 @@
               <span class="item-type">{{item.type_cn}}</span>
               <span class="item-name">
 								<nuxt-link :to="item.type|toUrl(item.id)" class="item-link">{{item.title}}</nuxt-link>
-                <span class="item-tag" v-for="tag in item.tags" :key="tag">
-                  <a href="javascript:void(0);" @click="tagClick(tag)">{{tag}}</a>
+                <span v-if="!isMobile">
+                  <span class="item-tag" v-for="tag in item.tags" :key="tag">
+                    <a href="javascript:" @click="tagClick(tag)">{{tag}}</a>
+                  </span>
                 </span>
 							</span>
               <span class="item-date">{{item.time.substr(0,10)}}</span>
