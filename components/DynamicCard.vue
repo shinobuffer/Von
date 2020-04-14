@@ -66,13 +66,7 @@
         </div>
         <div class="comments-main" :id="`anchor-${ddata.id}`">
           <h3 class="comments-list-title">Comments<span> | {{allCount}} 条评论</span></h3>
-          <div class="waiting" v-if="commentWaiting">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-          </div>
+          <waiting v-if="commentWaiting"/>
           <div class="comments-list" v-else-if="allCount">
             <div class="comments-list-item" :id="'comment-'+comment.id" v-for="comment in commentList" :key="comment.id">
               <div class="comment-content-wrap">

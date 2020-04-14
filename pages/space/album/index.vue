@@ -7,14 +7,8 @@
           <span class="name">{{item}}</span><span class="count">{{typeCount[key]}}</span>
         </span>
       </div>
-      <div class="waiting" v-show="albumWaiting">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
-      </div>
-      <div class="album-list tl">
+      <waiting v-if="albumWaiting"/>
+      <div class="album-list tl" v-else>
         <div class="album-card" v-for="(item,index) in curAlbums" :key="item.id">
           <div class="picture" :style="{backgroundImage:'url(/root'+item.imgSrc+')'}" @click="openLB(index)">
             <a @click.stop="delPicture(item)" class="iconfont icon-trash clearm"></a>

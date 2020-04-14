@@ -10,13 +10,7 @@
           <header class="search-header fc">
             <h1>{{searchWaiting?'搜索中…':`「${$route.params.key}」搜索结果`}}</h1>
           </header>
-          <div class="waiting" v-if="searchWaiting">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-          </div>
+          <waiting v-if="searchWaiting"/>
           <div class="search-results" v-else-if="searchFound">
             <div class="panel-h" v-for="each in curResults" :key="each.id+each.type">
               <div class="panel-h-img">
@@ -128,8 +122,9 @@ export default {
       }
     },
     loadMore(){
-      if (this.curResults.length === this.resultNum){}
-      else if (this.curResults.length + 8 < this.resultNum)
+      if (this.curResults.length === this.resultNum)
+        return;
+      if (this.curResults.length + 8 < this.resultNum)
         for(let i=0;i<8;i++)this.curResults.push(this.searchResults[this.curResults.length]);
       else
         for(let i=this.curResults.length;i<this.resultNum;i++)this.curResults.push(this.searchResults[i]);

@@ -2,13 +2,7 @@
   <div>
     <h2 class="draft-head">{{this.type==='note'?'笔记':'文章'}}草稿<a href="javascript:" class="draft-add-btn" @click="newDraft">+</a></h2>
     <div class="draft-content" :class="{empty:!draftExist}" etext="什么草稿都没有，好干净！">
-      <div class="waiting" v-if="draftWaiting">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
-      </div>
+      <waiting v-if="draftWaiting"/>
       <transition-group tag="div" name="flip" class="draft-list" v-else>
         <div class="draft-list-item" v-for="each in drafts" :key="each.id">
           <p class="row1">

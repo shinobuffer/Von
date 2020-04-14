@@ -17,13 +17,7 @@
             <span class="nso-l" :class="{'nso-selected':!rSelected}" @click="rSelected=false">日期降序</span>
             <span class="nso-r" :class="{'nso-selected':rSelected}" @click="rSelected=true">分类归类</span>
           </div>
-          <div class="waiting" v-show="noteWaiting">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-          </div>
+          <!--waiting组件移除-->
           <div class="list-container tl" v-show="rSelected">
             <div class="category-list" v-for="(item,key) in catMap" :key="key">
               <div class="category-title">
@@ -140,8 +134,9 @@ export default {
   },
   methods:{
     loadMore(){
-      if(this.curNotes.length===this.noteNum){}
-      else if(this.curNotes.length+6<this.noteNum)
+      if(this.rSelected||this.curNotes.length===this.noteNum)
+        return;
+      if(this.curNotes.length+6<this.noteNum)
         for(let i=0;i<6;i++)this.curNotes.push(this.notes[this.curNotes.length]);
       else
         for(let i=this.curNotes.length;i<this.noteNum;i++)this.curNotes.push(this.notes[i]);

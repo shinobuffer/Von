@@ -21,13 +21,7 @@
             </ul>
           </div>
           <div class="article-list" etext="如果你看到了这个，说明我在搬砖" :class="{empty:noContent}">
-            <div class="waiting" v-show="artWaiting">
-              <div class="rect1"></div>
-              <div class="rect2"></div>
-              <div class="rect3"></div>
-              <div class="rect4"></div>
-              <div class="rect5"></div>
-            </div>
+            <waiting v-show="artWaiting"/>
             <acg-panel v-for="article in curArts" :key="article.aid" :article="article"/>
           </div>
           <div class="pager-no-more" v-show="pageNum===curPage&&!artWaiting">没有更多啦</div>

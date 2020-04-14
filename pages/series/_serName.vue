@@ -11,13 +11,7 @@
                        :to="item.serName|seriesUrl"
                        @click.native="seriesJmp(item.serName)">{{item.serName}}</nuxt-link>
           </div>
-          <div class="waiting" v-if="serWaiting">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-          </div>
+          <waiting v-if="serWaiting"/>
           <div class="ser-header" v-else>
             <div class="ser-h-left">
               <i class="iconfont icon-book clearm"></i>
