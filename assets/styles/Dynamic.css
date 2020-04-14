@@ -3,8 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
 	max-width: unset;
-	width: 10rem;
-	padding: .8rem 0;
+	width: 10.2rem;
+	padding: .8rem .1rem;
 	background: 0;
 }
 .loading-content:before{
@@ -190,7 +190,6 @@ img.img-content{
 
 .d-card{
 	position: relative;
-	border: .01rem solid #eaeaea;
 	border-radius: .04rem;
 	margin-bottom: .1rem;
 	background: #fff;
@@ -227,7 +226,7 @@ img.img-content{
 		/*------imgsbox-------------------------------------*/
 			.thumbnail-wrap .thumbnail-list{
 				list-style: none;
-				width: 3.5rem;
+				max-width: 3.5rem;
 				margin-top: -.05rem;
 				margin-left: -.05rem;
 				text-align: left;
@@ -315,7 +314,9 @@ img.img-content{
 					margin-top: .08rem;
 					white-space: nowrap;
 					text-align: left;
+          overflow-x: auto;
 				}
+        .zoom-slider-wrap .zoom-slider::-webkit-scrollbar {display:none}
 					.zoom-slider li:nth-of-type(9n+1){
 						margin-left: 0;
 					}

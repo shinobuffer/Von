@@ -178,6 +178,7 @@
 	.admin-nav-item{
 		display: inline-block;
 		padding: .06rem .2rem;
+    border: .01rem solid transparent;
 		border-radius: .04rem .04rem 0 0;
 		transition: .3s ease;
 		color: #00a1d6;
@@ -192,7 +193,6 @@
 		color: #555;
 		border: .01rem solid #eaeaea;
 		border-bottom-color: transparent;
-
 	}
 .auth-box-container{
 	position: fixed;

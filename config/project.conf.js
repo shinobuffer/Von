@@ -26,7 +26,7 @@ export default {
 		codeStyle:'github',
 		toolbarsFlag:false,
 		shortCut:false,
-		tabSize:4,
+		tabSize:2,
 		externalLink: {
 			markdown_css:()=>'/static/css/github-markdown3.0.css'
 		}
@@ -38,7 +38,7 @@ export default {
 		imageFilter:function(file){
 			return (/image\/\w+/.test(file.type)&&file.size<5000000);
 		},
-		tabSize:4,
+		tabSize:2,
 		toolbars:{
 			bold: true,
 			italic: true,
