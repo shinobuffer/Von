@@ -1,6 +1,7 @@
 .page-content.tag{
 	overflow: hidden;
 	padding: .1rem;
+  min-height: 3.5rem;
 }
 .page-info .intro.tag{
 	letter-spacing: 0;
