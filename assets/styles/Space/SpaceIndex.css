@@ -1,0 +1,35 @@
+.ss-table{
+  margin-bottom: .2rem;
+}
+.ss-table .ss-table-row{
+  margin-left: -.08rem;
+  overflow: hidden;
+}
+  .ss-table .ss-table-cell-wrap{
+    padding: 0 .08rem;
+    width: 33%;
+    float: left;
+  }
+    .ss-table .ss-table-cell{
+      background: #f7fcfe;
+      padding: .1rem .2rem;
+      font-size: .12rem;
+      color: #8b8e99;
+      border: .02rem solid transparent;
+      border-radius: .03rem;
+      cursor: pointer;
+    }
+    .ss-table .ss-table-cell:hover{
+      background: #ecf8fc;
+      border-color: #5abebc;
+    }
+      .ss-table-cell .text-content{
+        margin: .06rem 0;
+        color: #5abebc;
+        font-weight: 600;
+        font-size: .18rem;
+      }
+      .ss-table-cell .diff .num{
+        margin-left: .05rem;
+        color: #5abebc;
+      }

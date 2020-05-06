@@ -1,14 +1,27 @@
 <template>
   <div class="space-home">
     <div class="col-1">
-      <div class="section">
-        <h3 class="section-title">网站公告</h3>
+      <div class="section site-statistics">
+        <h3 class="section-title">站点数据</h3>
         <div class="section-content">
-
+          <div class="ss-table tl">
+            <div class="ss-table-row">
+              <div class="ss-table-cell-wrap">
+                <div class="ss-table-cell">
+                  <div class="name">文章阅读</div>
+                  <div class="text-content">100,100</div>
+                  <div class="diff">
+                    <span>昨日</span>
+                    <span class="num">▲10</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="section">
-        <h3 class="section-title">站点访问</h3>
+      <div class="section site-notice">
+        <h3 class="section-title">站点公告</h3>
         <div class="section-content">
         </div>
       </div>
@@ -38,6 +51,11 @@ export default {
       default:''
     }
   },
+  filters:{
+    diffNum(count){
+      return count?count.replace(/(\d)(?=(?:\d{3})+$)/g,'$1,'):'--'
+    }
+  },
   data(){
     return{
       memo:this.memo_
@@ -59,5 +77,4 @@ export default {
 </script>
 
 <style>
-
 </style>
