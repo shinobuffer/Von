@@ -213,7 +213,7 @@
 		cursor: pointer;
 	}
 		.reachTop .nav-icon span{
-			background: #dfdfdf;
+			background: white;
 		}
 		.nav-icon span{
 			display: block;

@@ -21,7 +21,7 @@
             <p>程序猿、ACG爱好者、<span title="FGO&明日方舟">“硕博连读”</span>、单线程DD</p>
             <p>jo厨、物语厨、月厨、车万厨</p>
             <p>不善言辞，完美主义（某些方面）</p>
-            <p><strong>不是大佬，不是大佬，不是大佬</strong></p>
+            <p><strong>平凡人，亚洲人，底层民众</strong></p>
           </div>
           <div class="about-post">
             <h2><span>貳</span>一些喜好</h2>

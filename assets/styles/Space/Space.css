@@ -168,6 +168,7 @@
 .section .section-title{
 	font-size: .2rem;
 	text-align: left;
+  font-weight: normal;
 	padding-bottom: .1rem;
 }
 .section-content.empty:before{

@@ -61,11 +61,13 @@
 }
 @media screen and (max-width: 900px){
 	.ph-img{
-		margin-top: .5rem;
+		margin-top: 0;
 		height: 2.5rem;
+    border-radius: 0;
 	}
 	.ph-img:before{
-		top: .5rem;
+		top: 0;
+    border-radius: 0;
 	}
 	.back2top{
 		display: none;

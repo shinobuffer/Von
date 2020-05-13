@@ -5,7 +5,7 @@
         <div class="h-inner">
           <div class="h-user">
             <div class="h-info">
-              <div class="h-avatar"><img :src="avatar"></div>
+              <div class="h-avatar"><img :src="avatar" :alt="name"></div>
               <div class="h-basic">
                 <p>
                   <span class="h-name">{{name}}</span>

@@ -7,7 +7,7 @@
           <h1 class="entry-title">{{title}}</h1>
           <p class="entry-info">
             <nuxt-link :to="xtype|typeUrl">{{xtype|typeEN2CN}}</nuxt-link>
-            <span class="isolate">·</span><span>{{time}}</span><span class="isolate">·</span><span>{{readCount|readNum}}阅读</span>
+            <span class="isolate">·</span><span>{{time.substr(0,10)}}</span><span class="isolate">·</span><span>{{readCount|readNum}}阅读</span>
           </p>
         </div>
       </div>

@@ -775,7 +775,7 @@ pre .copy-btn:hover{
 	padding: 0 1em 1em 0 !important;
 }
 blockquote{
-	margin: .1rem .05rem;
+	margin: .1rem 0;
 	padding: .5em 1em;
 	background: #fafafa;
 	position: relative;
@@ -852,6 +852,7 @@ blockquote>:last-child{
 	clear: both;
 }
 .content-area .v-note-wrapper{
+  min-width: unset;
 	z-index: 999;
   border: none;
 }
@@ -1099,6 +1100,7 @@ input::-webkit-search-cancel-button{
 }
 #mobile-app .content-area{
   font-size: .15rem;
+  padding: 0 .05rem;
 }
 .serif .fc,.serif .comment-content,.serif .markdown-body{
   font-family: 'Noto Serif SC',sans-serif;
@@ -1130,7 +1132,7 @@ input::-webkit-search-cancel-button{
   font-size: .14rem;
   line-height: .2rem;
 	margin: .2rem  0;
-	padding: .1rem .2rem;
+	padding: .08rem .16rem;
 	border: .01rem dashed #e2e2e2;
 	background: rgba(255,255,255,.7);
 	color: #939393;

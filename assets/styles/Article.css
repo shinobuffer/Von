@@ -1,6 +1,6 @@
 #mobile-app .ph-info{
 	padding: 0 .3rem;
-	bottom: .5rem;
+  bottom: 25%;
 }
 .ph-info{
 	position: absolute;
@@ -13,11 +13,13 @@
 	text-shadow: .02rem .02rem .1rem black;
 }
 	#mobile-app .ph-info .entry-title{
-		font-size: .24rem;
+		font-size: .22rem;
+    letter-spacing: 0;
 	}
 	.ph-info .entry-title{
 		font-weight: 500;
 		color: white;
+    line-height: 1.1;
 		margin-left: -.1rem;
 	}
 	.ph-info .entry-info{

@@ -96,10 +96,16 @@ export default {
     }
   },
   computed:{
+    need2hide(){
+      if (/(about|archive-type-id|note-id)/.test(this.$route.name))
+        return this.screenWidth <= 900;
+      else
+        return !/^(space|search|bangumi|dynamic|series)/.test(this.$route.name)
+    },
     navClass(){
       return{
         home:this.$route.name==='index' && this.scrollTop<200 && !this.isOpened && this.screenWidth>=1000,
-        reachTop:this.scrollTop<200 && !/^(space|search|archive-type-id|note-id|bangumi|dynamic|about|series)/.test(this.$route.name) && !this.isMasked,
+        reachTop:this.scrollTop<200 && this.need2hide && !this.isMasked,
         pinned:this.upping||this.scrollTop<200
       }
     },
