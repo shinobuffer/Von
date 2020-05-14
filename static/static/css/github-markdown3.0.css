@@ -446,10 +446,8 @@
 }
 
 .markdown-body blockquote {
-  	padding: .5em 1em;
-	margin-left: .5em;
-	margin-right: .5em;
-	background: #fafafa99;
+	padding: .5em 1em;
+	background: #fafafa;
 	position: relative;
 	border-radius: .05rem;
 	text-align: left;

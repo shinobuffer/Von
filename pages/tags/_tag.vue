@@ -1,7 +1,7 @@
 <template>
   <div class="tag-result-wrap">
     <div class="tag-query-result tl" v-if="!tag404">
-      <h2 v-if="!$route.params.tag">随便看看?</h2>
+      <h2 v-show="!$route.params.tag">Random</h2>
       <ul>
         <li v-for="item in curList" :key="item.id+item.type">
           <span class="item-type">{{item.type_cn}}</span>

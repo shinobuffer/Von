@@ -20,7 +20,7 @@
       <a class="work-name" :href="bgInfo.workLink" :title="'作品:'+bgInfo.workName" rel="nofollow" target="_blank">{{bgInfo.workName}}</a>
       <a class="author-name" :href="bgInfo.authorLink" :title="'作者:'+bgInfo.authorName" rel="nofollow" target="_blank">{{bgInfo.authorName}}</a>
     </div>
-    <div class="ht-down" @click="go_down"><span><i class="iconfont icon-down"></i></span></div>
+    <div class="ht-down" @click="go_down"><span><i class="iconfont icon-down clearm"></i></span></div>
   </div>
 </template>
 

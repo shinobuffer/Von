@@ -53,7 +53,7 @@ export default {
   },
   filters:{
     diffNum(count){
-      return count?count.replace(/(\d)(?=(?:\d{3})+$)/g,'$1,'):'--'
+      return count>1?count.toString().replace(/(\d)(?=(?:\d{3})+$)/g,'$1,'):'--'
     }
   },
   data(){

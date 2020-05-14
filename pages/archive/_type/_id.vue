@@ -37,7 +37,7 @@
               <ssr-editor v-else :raw-content="rawContent"/>
             </div>
             <footer class="post-footer tl">
-              <div class="post-update"><span>{{lut}} Lsat Update</span></div>
+              <div class="post-update"><span>{{lut.substr(0,16)}} Lsat Update</span></div>
               <div class="post-reward"></div><!--暂不开发-->
               <div class="post-copyright">
                 <div class="post-copyright-author tl">

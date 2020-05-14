@@ -1,6 +1,6 @@
 @keyframes floating {
-	from{transform: translateY(0) scaleX(2) translateX(-50%);}
-	to{transform: translateY(.1rem) scaleX(2) translateX(-50%);}
+	from{transform: translate(-50%,0) scaleX(2.5);}
+	to{transform: translate(-50%,.1rem) scaleX(2.5);}
 }
 @keyframes extend {
   from{width: 0;}

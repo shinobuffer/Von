@@ -177,7 +177,7 @@
 			padding: 0 .08rem;
 			color: #6d757a;
 			margin-right: .05rem;
-			margin-bottom: .1rem;
+			margin-bottom: .06rem;
 			border: .02rem solid rgba(0,0,0,.1);
 			border-radius: 1rem;
 			font-size: .14rem;
@@ -731,7 +731,7 @@
 }
 pre .copy-btn{
 	position: absolute;
-	top: .1rem;
+	bottom: .1rem;
 	right: .1rem;
 	opacity: 0;
 	color: #b8c0cc;
@@ -1154,13 +1154,13 @@ input::-webkit-search-cancel-button{
 .mobile-back2top{
 	display: none;
 	position: fixed;
-	right: .15rem;
-	bottom: .15rem;
+	right: .2rem;
+	bottom: .2rem;
 	height: .4rem;
 	width: .4rem;
 	font-size: .18rem;
 	background: rgba(255,255,255,.9);
-	box-shadow: 0 0 .04rem rgba(0,0,0,.12), 0 .04rem .04rem rgba(0,0,0,.24);
+	box-shadow: 0 .04rem .1rem rgba(0,0,0,.2);
 	border-radius: .1rem;
 	animation: fadeIn .3s both ease;
 	z-index: 1900;
