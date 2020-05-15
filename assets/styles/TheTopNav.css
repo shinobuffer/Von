@@ -197,6 +197,9 @@
 }
 
 /*小型导航*/
+.header-nav-m{
+  display: none;
+}
 .nav-content{
 	height: .5rem;
 	width: 100%;

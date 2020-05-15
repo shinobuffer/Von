@@ -1,7 +1,7 @@
 <template>
   <div class="site-header" :class="navClass">
 <!--    <div class="header-scrollbar" :style="{width:processed}"></div>-->
-    <div class="header-nav-m" v-show="screenWidth<1000">
+    <div class="header-nav-m">
       <div class="nav-content">
         <div class="nav-icon" :class="{open:isOpened}" @click="isOpened=!isOpened">
           <span></span>
@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <div class="header-nav no-select" v-show="screenWidth>=1000">
+    <div class="header-nav no-select">
       <div class="site-brand pl">
         <nuxt-link :to="loginStatus?'/space':'/'">
           <span class="oshino"><ruby>忍野<rp>(</rp><rt>おしの</rt><rp>)</rp></ruby></span>

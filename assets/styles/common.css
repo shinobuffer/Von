@@ -62,17 +62,16 @@
 	text-align: center;
 	top: 35%;
 	color: white;
-	padding: 0 .5rem;
+	padding: 0 .25rem;
 	text-shadow: 0.02rem 0.02rem 0.1rem black;
 }
 .page-info .intro{
 	font-size: .32rem;
-	letter-spacing: .05rem;
-	margin-bottom: .1rem;
+	letter-spacing: .02rem;
 	transition: .5s;
 }
 .page-info .tsukkomi{
-	font-size: .2rem;
+	font-size: .18rem;
 }
 
 /*==================================================================*/
