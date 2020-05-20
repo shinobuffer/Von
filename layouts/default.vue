@@ -174,6 +174,7 @@ export default {
         container:document.getElementById('aplayer'),
         fixed:true,
         order:'random',
+        preload:'none',
         volume:.2,
         lrcType:3,
         audio:musicRes.data,

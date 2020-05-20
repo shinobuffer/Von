@@ -303,12 +303,9 @@
 
 
 .DDF .n-inner,.DDF .space-home .col-1,.DDF .col-2 .section,/*1*/
-.DDF .dynamic-content-wrap,
 .DDF .space-launch,.DDF .space-album,.DDF .space-setting
 {
-	background: #333;
-	box-shadow: none;
-	border-color: #444;
+	background: #2b2b2b;
 }
 .DDF .comments-list-item,.DDF .comments-list-title,
 .DDF .category-list .category-list-item,.DDF .tag-query-result ul li,
@@ -393,7 +390,6 @@
 }
 .DDF .d-card,.DDF .dynamic .left-panel .scroll-content>div,.DDF .dynamic .publish-sub-panel{
 	background: #2b2b2b;
-	border-color: #333;
 }
 .deep ::selection{
 	background: #5abebc;

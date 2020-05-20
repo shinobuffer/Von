@@ -6,13 +6,13 @@
         <div class="section-content">
           <div class="ss-table tl">
             <div class="ss-table-row">
-              <div class="ss-table-cell-wrap">
+              <div class="ss-table-cell-wrap" v-for="item in statisticsData" :key="item.des">
                 <div class="ss-table-cell">
-                  <div class="name">文章阅读</div>
-                  <div class="text-content">100,100</div>
+                  <div class="name">{{item.des}}</div>
+                  <div class="text-content">{{item.sum|splitNum}}</div>
                   <div class="diff">
                     <span>昨日</span>
-                    <span class="num">▲10</span>
+                    <span class="num">{{item.diff|diffNum}}</span>
                   </div>
                 </div>
               </div>
@@ -52,10 +52,21 @@ export default {
     }
   },
   filters:{
-    diffNum(count){
-      let ret = count.toString();
-      return ret>0?ret.replace(/(\d)(?=(?:\d{3})+$)/g,'$1,'):'--'
+    splitNum(num){
+      return num.toString().replace(/(\d)(?=(?:\d{3})+$)/g,'$1,')
+    },
+    diffNum(num){
+      let ret = num.toString();
+      return ret>0?'▲'+ret.replace(/(\d)(?=(?:\d{3})+$)/g,'$1,'):'--'
     }
+  },
+  asyncData({app,req}){
+    return app.$fetch('/apis/auth/main.php',{},req).then(res=>{
+      let {statisticsData} = res.data.data;
+      return{
+        statisticsData
+      }
+    })
   },
   data(){
     return{

@@ -29,8 +29,6 @@
 	max-width: 12rem;
 	background: white;
 	border-radius: .05rem;
-	box-shadow: 0 0 0 .01rem #eee;
-	border: .01rem solid #eee;
 	overflow: hidden;/**/
 }
 .l-sidenav,.a-sidenav{
@@ -190,8 +188,6 @@
 	padding: .15rem .2rem;
 	background: white;
 	border-radius: .04rem;
-	border: .01rem solid #eee;
-	box-shadow: 0 0 0 .01rem #eee;
 	text-align: left;
 }
 .col-2 .section .section-title{
@@ -211,8 +207,6 @@
 }
 .space-home .col-1{
 	padding: .15rem .2rem;
-	border: .01rem solid #eee;
-	box-shadow: 0 0 0 .01rem #eee;
 	background: white;
 }
 .memo textarea{
@@ -340,7 +334,6 @@
 	text-align: left;
 	background: white;
 	border-radius: 0 0 .05rem .05rem;
-	box-shadow: 0 0 0 .01rem #eee;
 }
 	.n-inner .n-tab-link {
 		display: inline-block;
