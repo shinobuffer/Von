@@ -3,7 +3,7 @@
 	left: 0;
 	right: 0;
 	color: white;
-	bottom: 35%;
+	bottom: 40%;
 	text-shadow: .02rem .02rem .1rem black;
 	transition: .3s ease;
 }
@@ -23,9 +23,6 @@
 		background: #b8c0cc30;
 		border-radius: .03rem;
 		padding: .02rem;
-	}
-	.about-post rt{
-		background: #b8c0cc30;
 	}
 	.about-post p,.link-description p{
 		margin-bottom: .15rem;

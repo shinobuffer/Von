@@ -26,32 +26,6 @@
 	.content-aside-ser{
 		display: none;
 	}
-}
-@media screen and (max-width: 1000px){
-  .header-nav{
-    display: none;
-  }
-  .header-nav-m{
-    display: block;
-  }
-  /*-----------------------------------------*/
-	.page-info .intro{
-		font-size: .24rem;
-	}
-	.page-content.note{ /*note特有*/
-		padding: 0;
-	}
-	.page-info .intro.tag{
-		font-size: .2rem;
-    line-height: 1.1;
-  }
-	.page-info .tsukkomi.tag{
-		font-size: .16rem;
-	}
-
-	.h-inner{
-		margin: .5rem auto 0;
-	}
   /*-----------------------------------------*/
   .page-content.dynamic{
     justify-content: center;
@@ -64,6 +38,18 @@
     max-width: 7.2rem;
     width: 100%;
   }
+}
+@media screen and (max-width: 1000px){
+  .header-nav{
+    display: none;
+  }
+  .header-nav-m{
+    display: block;
+  }
+  /*-----------------------------------------*/
+	.h-inner{
+		margin: .5rem auto 0;
+	}
 }
 @media screen and (max-width: 900px){
 	.ph-img{
@@ -92,7 +78,7 @@
 		display: none;
 	}
 	.header-top:before{
-		background: transparent !important;
+		background: none;
 	}
 /*-----------------------------------------*/
 	.header-img,.no-img{
@@ -102,6 +88,19 @@
 		padding-top: .6rem;
 	}
 /*-----------------------------------------*/
+  .page-info .intro{
+    font-size: .24rem;
+  }
+  .page-content.note{ /*note特有*/
+    padding: 0;
+  }
+  .page-info .intro.tag{
+    font-size: .2rem;
+    line-height: 1.1;
+  }
+  .page-info .tsukkomi.tag{
+    font-size: .16rem;
+  }
 	.page-img{
 		height: 2rem;
 	}
