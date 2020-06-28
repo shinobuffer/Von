@@ -1074,9 +1074,9 @@ input::-webkit-search-cancel-button{
 /*other*/
 @font-face {
   font-family: 'Fira Code VF';
-  src: url('/static/fonts/FiraCode-VF.woff') format('woff-variations'), url("/static/fonts/FiraCode-VF.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
+  src: url('/static/fonts/FiraCode-VF.woff2') format('woff2'),
+       url('/static/fonts/FiraCode-VF.woff') format('woff'),
+       url("/static/fonts/FiraCode-VF.ttf") format("truetype");
 }
 .page-enter-active,.page-leave-active{
   transition: .3s ease-in-out;

@@ -2,7 +2,8 @@ import PCONF from "~/config/project.conf"
 export default {
 	data(){
 		return{
-			mdSetting:PCONF.MDEditMode,
+      inClient:false,
+      mdSetting:PCONF.MDEditMode,
 
 			title:'',
 			author:'忍野ニャ',
@@ -34,6 +35,18 @@ export default {
 		else
       window.confirm('离开会导致未保存的信息丢失，是否继续') && next()
 	},
+  mounted(){
+    this.inClient = true;
+    if (typeof this.hi==='string')
+      document.getElementById('hi').style.backgroundImage=`url(${this.hi})`;
+    setTimeout(()=>this.loadImgs(),500);
+    window.onbeforeunload = function () {
+      return 1;
+    }
+  },
+  destroyed(){
+    window.onbeforeunload = null
+  },
 	methods:{
 		selectTagID(tid){
 			if (this.selectedTagsID.indexOf(tid)===-1)

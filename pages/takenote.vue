@@ -139,7 +139,6 @@ export default {
   },
   data(){
     return{
-      inClient:false,
       catOptions:[],
 
       nid:this.$route.query.nid,
@@ -156,12 +155,6 @@ export default {
       this.mdSetting.toolbars.subfield = false;
       this.mdSetting.subfield = false;
     }
-  },
-  mounted(){
-    this.inClient=true;
-    if (typeof this.hi==='string')
-      document.getElementById('hi').style.backgroundImage=`url(${this.hi})`;
-    setTimeout(()=>this.loadImgs(),500);
   },
   methods:{
     tagInputFocus(){
