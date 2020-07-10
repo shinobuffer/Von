@@ -80,7 +80,7 @@
 			.post-tags{
 				display: inline-block;
 				vertical-align: top;
-				width: calc(100% - 2.2rem);
+				width: calc(100% - 2.25rem);
 				min-height: .25rem;
 				color: grey;
 				text-transform: uppercase;

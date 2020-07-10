@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="album-head">我的相簿</h2>
-    <div class="album-content" :class="{empty:!typeCount[curType]&&!albumWaiting}" etext="这里空空如也">
+    <div class="album-content" :class="{empty:!typeCount[curType]&&!albumWaiting}" data-empty-text="这里空空如也">
       <div class="tab-list">
         <span class="tab" v-for="(item,key) in typeMap" :key="key" @click="curType=key" :class="{cur:curType===key}">
           <span class="name">{{item}}</span><span class="count">{{typeCount[key]}}</span>

@@ -20,7 +20,7 @@
               <li :class="{'o-selected':orderFlag===1}" @click="orderFlag=1">按热度</li>
             </ul>
           </div>
-          <div class="article-list" etext="如果你看到了这个，说明我在搬砖" :class="{empty:noContent}">
+          <div class="article-list" data-empty-text="如果你看到了这个，说明我在搬砖" :class="{empty:noContent}">
             <waiting v-show="artWaiting"/>
             <div class="panel-t tl" v-for="art in curArts" :key="art.aid">
               <p class="pt-time"><i class="iconfont icon-time"></i> {{art.time.substr(0,10)}}</p>

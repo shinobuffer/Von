@@ -20,7 +20,7 @@
               <li :class="{'o-selected':orderFlag===1}" @click="orderFlag=1">按热度</li>
             </ul>
           </div>
-          <div class="article-list" etext="如果你看到了这个，说明我在搬砖" :class="{empty:noContent}">
+          <div class="article-list" data-empty-text="如果你看到了这个，说明我在搬砖" :class="{empty:noContent}">
             <waiting v-show="artWaiting"/>
             <acg-panel v-for="article in curArts" :key="article.aid" :article="article"/>
           </div>

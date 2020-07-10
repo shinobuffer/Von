@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="draft-head">{{this.type==='note'?'笔记':'文章'}}草稿<a href="javascript:" class="draft-add-btn" @click="newDraft">+</a></h2>
-    <div class="draft-content" :class="{empty:!draftExist}" etext="什么草稿都没有，好干净！">
+    <div class="draft-content" :class="{empty:!draftExist}" data-empty-text="什么草稿都没有，好干净！">
       <waiting v-if="draftWaiting"/>
       <transition-group tag="div" name="flip" class="draft-list" v-else>
         <div class="draft-list-item" v-for="each in drafts" :key="each.id">

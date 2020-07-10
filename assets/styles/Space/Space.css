@@ -71,9 +71,9 @@
 .draft-content,.album-content{
 	min-height: 4rem;
 }
-.draft-content.empty:after,.album-content.empty:after{
+.draft-content.empty:before,.album-content.empty:before{
 	background-image: url(/static/images/nodata.png);
-	content:attr(etext);
+	content:attr(data-empty-text);
 	display: block;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -171,7 +171,7 @@
 }
 .section-content.empty:before{
 	background-image: url(/static/images/nodata.png);
-	content:attr(etext);
+	content:attr(data-empty-text);
 	display: block;
 	background-position: center center;
 	background-repeat: no-repeat;
