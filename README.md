@@ -4,16 +4,16 @@
 
 **该项目为重构优化之后的SSR版本，并且以后也只维护该项目，如对旧项目（SPA版本）有需要请转[此处](https://github.com/Bersder/nameless-blog)**
 ## Introduction
-整个博客（下称Von）前端完全基于 Vue+Nuxt 开发，后端接口层 php 实现
+整个博客（下称Von）前端完全基于 Vue+Nuxt 开发，后端接口层 php 实现，python 辅助数据采集
 
-Von 有如下特点
+除了一般博客有的功能，Von 还有如下特点
 - 技术上
   - 自适应宽度，**双端适配**（PC+移动）
-  - 采用**服务端渲染**（SSR），更好的SEO，容易被收录
+  - **服务端渲染**（SSR），更好的SEO
   - ...
 - 内容上
-  - 针对 otaku 的**追番页面**（bangumi同步）
-  - 专门的**动态页面**，发送带图动态，分享你的生活
+  - **追番页面**（bangumi同步），记录追番进程
+  - **动态页面**（仿自B站），发送带图动态，分享日常
   - ...
   
 版本更新记录 [CHANGE_LOG](./CHANGE_LOG.md)
@@ -31,7 +31,6 @@ LNPM 部署并配置好后
 
 接下来安装 nodejs，很简单这里就跳过了，下面给出之后要安装的模块
 ```bash
-npm install vue-cli -g
 npm install pm2 -g
 ```
 pm2 是用来托管进程的，能保证你和server的远程连接断开后 nuxt 还在运行。安装完pm2后把执行文件链到 bin 里以在命令行中使用：`ln -s nodejs目录/bin/pm2 /usr/local/bin/pm2` 
@@ -55,14 +54,12 @@ server {
     location ~ ^/(downloads|music|site|static|tmp|uploads)/ {
         # 网站根目录，下同
         root html_nuxt;
-        # 部分文件设置跨域
-        expires 7d;
-        if ( $uri ~* \.(lrc|json|eot|otf|ttf|woff|woff2|svg)$ ) {
-            add_header Access-Control-Allow-Credentials true;
-            add_header Access-Control-Allow-Origin http://xxx.com;
-            add_header Access-Control-Allow-Headers X-Requested-With;
-            add_header Access-Control-Allow-Methods GET,POST,OPTIONS;
-        }
+        access_log off;
+        # 静态资源允许跨域，设置缓存
+        expires 15d;
+        add_header Access-Control-Allow-Origin *;
+        add_header Access-Control-Allow-Headers X-Requested-With;
+        add_header Access-Control-Allow-Methods GET,POST,OPTIONS;
     }
     # PHP CGI
     location ~ \.php$ {
@@ -72,9 +69,13 @@ server {
         fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
         include        fastcgi_params;
     }
-
-    # 最后交由代理
+    # 首先查看有没有该文件
     location / {
+        root html;
+        try_files $uri @nuxt;
+    }
+    # 最后交由代理
+    location @nuxt{
         proxy_redirect off;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
