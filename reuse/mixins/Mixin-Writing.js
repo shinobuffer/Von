@@ -32,8 +32,10 @@ export default {
 	},
 	beforeRouteLeave(to,from,next){
 		if(to.name==='space'||to.name==='index')next();
+		else if (window.confirm('离开会导致未保存的信息丢失，是否继续'))
+      next();
 		else
-      window.confirm('离开会导致未保存的信息丢失，是否继续') && next()
+		  next(false)
 	},
   mounted(){
     this.inClient = true;

@@ -369,14 +369,10 @@
 	.panel-h:nth-child(even) .post-read{
 		right: .15rem;
 	}
-	.pt-ym{
-		padding-bottom: .1rem;
-	}
 	.pt-d{
-		font-weight: 100;
-		font-size: .55rem;
+		font-size: .5rem;
 		font-style: italic;
-		line-height: .3rem;
+		line-height: 1;
 	}
 	.post-meta{
 		transform: rotate(90deg);
@@ -403,6 +399,7 @@
 		float: right;
 		margin: .15rem .4rem 0 0;
 		height: 1.7rem;
+        line-height: 1;
 		font-size: .17rem;
 		text-align: left;
 	}
@@ -410,19 +407,10 @@
 		float: left;
 		margin: .15rem 0 0 .4rem;
 	}
-	.post-title p{
-		letter-spacing: .005rem;
-		text-transform: uppercase;
-		text-shadow: 0 0 .02rem rgba(0,0,0,.4);
-	}
 	.post-title p:first-letter{
-		font-size: .25rem;
+		font-size: 1.5em;
 		padding-bottom: .03rem;
 		margin-top: -.04rem;
-	}
-	.post-title a{
-		color: #425066;
-		line-height: 1;
 	}
 
 /*==================================================================*/
@@ -770,9 +758,9 @@ pre .copy-btn:hover{
 	white-space: pre;
 	background: transparent;
 }
-.hljs{
-	background: transparent !important;
-	padding: 0 1em 1em 0 !important;
+pre .hljs{
+	background: transparent;
+	padding: 0 1em 1em 0;
 }
 blockquote{
 	margin: .1rem 0;
@@ -980,18 +968,22 @@ input::-webkit-search-cancel-button{
 	width: .08rem;
 	height: .08rem;
 }
+.hljs::-webkit-scrollbar{
+	width: .05rem;
+	height: .05rem;
+}
 ::-webkit-scrollbar-track{
 	background: #eee;
 }
 ::-webkit-scrollbar-thumb{
-	background: #5abebc80;
+  background: #5abebc80;
   border-radius: .04rem;
 }
 ::-webkit-scrollbar-thumb:hover{
   background: #5abebc;
 }
 ::selection {
-	background:rgba(33, 33, 37, 0.6);
+	background:rgba(33, 33, 33, 0.6);
 	color:white;
 }
 .pr{float: right}.pl{float: left}
@@ -1090,7 +1082,7 @@ input::-webkit-search-cancel-button{
 	width: 100%;
 }
 #app,#mobile-app {
-	font-family: Ubuntu,"Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;

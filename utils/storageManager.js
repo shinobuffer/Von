@@ -41,3 +41,14 @@ export function getCookieFromStr(key,str){
 export function delCookie(key) {
   setCookie(key,'',-1)
 }
+
+export function setLocalStorage(data){
+  for (let {key,val} of data.entries())
+    localStorage.setItem(key,val)
+}
+
+export function delLocalStorage(keys) {
+  keys = typeof keys === "string"?[keys]:keys;
+  for (let key of keys)
+    localStorage.removeItem(key)
+}
