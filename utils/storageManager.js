@@ -1,7 +1,12 @@
-export function setCookie(key,value,expDays) {
-  let date = new Date();
-  date.setTime(date.getTime() + expDays*86400000);
-  document.cookie = key + '=' + escape(value) + ';expires=' + date.toUTCString() + ';path=/'
+export function setCookie(key,value,expDays=0,domain=null) {
+  let expires = '';
+  if(expDays){
+    let date = new Date();
+    date.setTime(date.getTime() + expDays*86400000);
+    expires = `expires=${date.toUTCString()};`
+  }
+  domain = domain?`domain=${domain};`:'';
+  document.cookie = `${key}=${escape(value)};${domain}${expires}path=/`;
 }
 
 export function getCookie(key) {
@@ -38,8 +43,8 @@ export function getCookieFromStr(key,str){
   return ''
 }
 
-export function delCookie(key) {
-  setCookie(key,'',-1)
+export function delCookie(key,domain=null) {
+  setCookie(key,'',-1,domain)
 }
 
 export function setLocalStorage(data){

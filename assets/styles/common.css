@@ -318,9 +318,6 @@
 		object-position: center center;
 		transition: .5s;
 	}
-	.panel-h:hover img{
-		opacity: .9;
-	}
 	.panel-h-img .float-preview{
 		position: relative;
 		height: .9rem;
@@ -355,13 +352,9 @@
 	.panel-h .post-read{
 		position: absolute;
 		bottom: 0;
-		font-size: .16rem;
-		line-height: .2rem;
+		font-size: .14rem;
 		user-select: none;
 		color: #FF7D7D;
-		padding: 0 .1rem;
-		border: .02rem solid #FF7D7D;
-		border-radius: .03rem;
 	}
 	.panel-h:nth-child(odd) .post-read{
 		left: .15rem;
@@ -412,6 +405,9 @@
 		padding-bottom: .03rem;
 		margin-top: -.04rem;
 	}
+    .post-title a:hover{
+      color: #4e9b99;
+    }
 
 /*==================================================================*/
 /*content-aside-board*/

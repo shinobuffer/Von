@@ -196,11 +196,7 @@
 .DDF .ca,.DDF .cah,.DDF .panel-h,.DDF .panel{
 	background: #333;
 }
-.DDF .panel-h .post-read{
-	color: #bbb;
-	border-color: #bbb;
-}
-.DDF .board-content,.DDF .post-title a,.DDF .article-list.empty:before,.DDF .panel-info{
+.DDF .board-content,.DDF .panel-h .post-read,.DDF .article-list.empty:before,.DDF .panel-info{
 	color: #ccc;
 }
 .DDF .panel-t{

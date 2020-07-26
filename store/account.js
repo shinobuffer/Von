@@ -1,4 +1,6 @@
 import {delCookie} from "../utils/storageManager";
+import UCONF from '../config/user.conf';
+const {rootDomain} = UCONF;
 export const state = ()=>({
   uid:0,
   name:'???',
@@ -24,7 +26,7 @@ export const mutations = {
     state.loginStatus = true;
   },
   logout(state){
-    delCookie('utk');
+    delCookie('utk','.'+rootDomain);
     state.token = '';
     state.uid = 0;
     state.name = '???';

@@ -43,7 +43,7 @@
                   <p><nuxt-link :to="each|artUrl">{{each.title}}</nuxt-link></p>
                 </div>
                 <div class="post-read">
-                  <i class="iconfont icon-fire"></i> {{each.readCount|readNum}}
+                  <i class="iconfont icon-fire"></i><span>{{each.readCount|readNum}}</span>
                 </div>
               </div>
             </div>

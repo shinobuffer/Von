@@ -66,7 +66,9 @@ import TheSiteFooter from '../components/TheSiteFooter';
 import LuminousBox from '../components/LuminousBox';
 import PopupInfoBox from '../components/PopupInfoBox';
 import {randInt} from "../utils/lib";
-import {getCookie, delCookie} from '../utils/storageManager';
+import {setCookie, getCookie, delCookie} from '../utils/storageManager';
+import UCONF from '../config/user.conf';
+const {rootDomain} = UCONF;
 export default {
   components: {
     TheSiteFooter,
@@ -145,7 +147,7 @@ export default {
   },
   beforeMount(){
     if (this.expire){
-      delCookie('utk');
+      delCookie('utk','.'+rootDomain);
       this.$store.commit('account/expire',false);
       this.$store.dispatch('infoBox/callInfoBox',{info:'登录过期，请重登', ok:false, during:3000});
     }
@@ -201,7 +203,7 @@ export default {
         document.getElementById('toggle-mode').classList.add('switching');
         setTimeout(()=>{
           this.darken ^= 1;
-          document.cookie = "darken="+this.darken+";path=/";
+          setCookie('darken',this.darken);
           this.darken?document.body.classList.add('deep'):document.body.classList.remove('deep');
         },600);
         setTimeout(()=>{
