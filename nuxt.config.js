@@ -36,8 +36,8 @@ module.exports = {
       { rel: 'apple-touch-icon', href: '/apple-icon.png' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: '/static/iconfont/iconfont.css' },
-      { rel: 'stylesheet', href: '/static/css/github-markdown3.0.css' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' },
+      //{ rel: 'stylesheet', href: '/static/css/github-markdown3.0.css' },
+      { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/styles/github.min.css' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Serif+SC:500,700&display=swap&subset=chinese-simplified,cyrillic' },
     ]
   },

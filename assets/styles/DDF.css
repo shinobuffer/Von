@@ -26,7 +26,8 @@
 	background: #1a1a1a;
 	color: #ccc;
 }
-.DDF .comment-content-input textarea,.DDF .comment-info-input input,.DDF .dynamic-launch textarea{
+.DDF .comment-content-input textarea,.DDF .comment-info-input input,.DDF .dynamic-launch textarea,
+.DDF .comment-content.preview{
 	border-color: rgba(255,255,255,.1);
 	color: #ccc;
 }

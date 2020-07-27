@@ -856,6 +856,7 @@ blockquote>:last-child{
 .katex-display{
 	overflow-x: auto;
 	overflow-y: hidden;
+  padding-bottom: .1rem;
 }
 .publish-area .v-note-wrapper .content-input-wrapper,
 .publish-area .content-input-wrapper .auto-textarea-wrapper
@@ -955,6 +956,7 @@ button{
 	outline: none;
 }
 textarea{
+  font-family: inherit;
 	background: transparent;
 }
 input::-webkit-search-cancel-button{
@@ -964,7 +966,7 @@ input::-webkit-search-cancel-button{
 	width: .08rem;
 	height: .08rem;
 }
-.hljs::-webkit-scrollbar{
+.hljs::-webkit-scrollbar,.katex-display::-webkit-scrollbar{
 	width: .05rem;
 	height: .05rem;
 }
@@ -1065,6 +1067,7 @@ input::-webkit-search-cancel-button{
   src: url('/static/fonts/FiraCode-VF.woff2') format('woff2'),
        url('/static/fonts/FiraCode-VF.woff') format('woff'),
        url("/static/fonts/FiraCode-VF.ttf") format("truetype");
+  font-display: swap;
 }
 .page-enter-active,.page-leave-active{
   transition: .3s ease-in-out;

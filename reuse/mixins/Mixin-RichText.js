@@ -164,8 +164,8 @@ export default {
 	},
 	directives:{
 		highlight:{
-			bind(e,binding,vm){
-				let blocks = e.querySelectorAll('pre code');
+			bind(el,binding,vm){
+				let blocks = el.querySelectorAll('pre code');
 				blocks.forEach(e=>{
 					let copyBtn = document.createElement('button');
 					copyBtn.innerText = 'Copy';

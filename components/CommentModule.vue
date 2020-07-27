@@ -11,8 +11,10 @@
           <input placeholder="网站(选填)" v-model.trim="website" name="website">
         </div>
         <span title="除了html、标题、分割线、表格、图片、下划线、标记、上下标"><i class="iconfont icon-markdown"></i>Markdown Supported</span>
-        <div class="comment-content-input" v-show="!previewOn"><textarea @keydown="textareaTab" placeholder="说点什么吧..." v-model="content"></textarea></div>
-        <div class="comment-content preview" v-show="previewOn" v-html="contentPreview" v-highlight></div>
+        <div class="comment-content-input" v-if="!previewOn">
+          <textarea @keydown="textareaTab" placeholder="说点什么吧..." v-model="content"></textarea>
+        </div>
+        <div class="comment-content preview" v-html="contentPreview" v-highlight v-else></div>
       </div>
       <div class="comment-robot-check">
         简单数学题：{{add1}} + {{add2}} = <input type="text" v-model.trim="sum">

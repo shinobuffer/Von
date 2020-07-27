@@ -2,7 +2,6 @@
 ## to do list
 > 画饼一时爽，一直画饼一直爽
 
-- [ ] highlight、katex CDN修改？
 - [ ] 重大修改：文章分类重组（ACGN，极客，随写），修改前后端不再使用string来判别类型 ``
 - [ ] Bug：修复appendChild报错（好像现在没事了？
 - [ ] 弹幕实现
@@ -13,10 +12,12 @@
 - [ ] 文章/笔记隐藏
 - [X] 文章编辑页添加离开/刷新提示 `518d9e9`
 - [X] 字体更新 `518d9e9`
+- [X] highlight、katex库改用国内CDN ``
 ## Bug Fixes
 - [X] 修复Header中标题、图片样式切换不同步问题 `af8b4ea`
 - [X] 修复文章编辑页取消返回时url不恢复的问题 `8e7900b`
-- [X] 修复无法正确修改cookie的问题，完善cookie管理api ``
+- [X] 修复无法正确修改cookie的问题，完善cookie管理api `97b9c0a`
+- [X] 修复评论预览代码块不渲染问题 ``
 - [ ] 修复评论区、动态区markdown样式支持不全(ol...) ``
 
 ## v1.2.3
