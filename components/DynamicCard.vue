@@ -5,7 +5,7 @@
       <p class="author-namae">{{ddata.author}}</p>
       <p class="time">{{ddata.time|commentTime}}</p>
       <div class="d-card-content">
-        <div class="text" v-html="dRenderer(ddata,0,0)" v-highlight></div>
+        <div class="text markdown-area" v-html="dRenderer(ddata,0,0)" v-highlight></div>
         <!--当存在图片时开启下面的imgsbox-->
         <div class="imgsbox no-select" v-if="ddata.imgs.length">
           <div class="thumbnail-wrap" v-if="!zoomingIn">
@@ -78,7 +78,7 @@
                   <span class="comment-time" :title="comment.datetime.substr(0,16)">{{comment.datetime|commentTime}}</span>
                   <span v-show="!isMobile" class="comment-id">#{{comment.id}}</span>
                 </div>
-                <div class="comment-content" v-html="dRenderer(comment,1,0)" v-highlight></div>
+                <div class="comment-content markdown-area" v-html="dRenderer(comment,1,0)" v-highlight></div>
                 <button class="comment-reply no-select" @click="replyThis(comment.id,comment.uid,comment.uname)">回复</button>
               </div>
               <div class="comment-children">
@@ -93,7 +93,7 @@
                         <span class="comment-time" :title="reply.datetime.substr(0,16)">{{reply.datetime|commentTime}}</span>
                         <span v-show="!isMobile" class="comment-id">#{{reply.id}}</span>
                       </div>
-                      <div class="comment-content" v-html="dRenderer(reply,1,1)" v-highlight></div>
+                      <div class="comment-content markdown-area" v-html="dRenderer(reply,1,1)" v-highlight></div>
                       <button class="comment-reply no-select" @click="replyThis(reply.id,reply.uid,reply.uname)">回复</button>
                     </div>
                   </div>

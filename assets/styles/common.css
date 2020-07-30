@@ -684,15 +684,47 @@
 
 /*==================================================================*/
 /*text-css*/
-.comment-content>p,.d-card-content .text>p{margin-bottom: 1em}
-.comment-content ul,.d-card-content .text ul{
-	padding-left: 1.5em;
+.markdown-area blockquote,
+.markdown-area p,
+.markdown-area ol,
+.markdown-area ul{
+  margin: 1em 0;
 }
-.comment-content>ul,.d-card-content .text>ul{
-	margin-bottom: .1rem;
+
+.markdown-area ol,
+.markdown-area ul{
+  padding-left: 1.5em;
 }
-.comment-content pre,.d-card-content .text pre{
-	font-family: "Fira Code VF",monospace,sans-serif;
+.markdown-area ol ol,
+.markdown-area ul ol {
+  list-style-type: lower-roman;
+}
+.markdown-area ol ol ol,
+.markdown-area ol ul ol,
+.markdown-area ul ol ol,
+.markdown-area ul ul ol {
+  list-style-type: lower-alpha;
+}
+.markdown-area ol ol,
+.markdown-area ol ul,
+.markdown-area ul ol,
+.markdown-area ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-area code,
+.markdown-area pre{
+  font-family: "Fira Code VF",monospace,sans-serif;
+}
+.markdown-area p code,.markdown-area li code{
+  padding: 0 .03rem;
+  font-size: 80%;
+  background: #f3f4f5;
+  border-radius: .03rem;
+  color: #ff7d7d;
+}
+.markdown-area pre{
 	position: relative;
 	overflow: auto;
 	padding: 1em 0 0 3em;
@@ -704,12 +736,20 @@
 	font-size: 85%;
 	max-width: 100%;
 }
+.markdown-area pre code{
+  font-family: inherit;
+  line-height: inherit;
+  word-spacing: normal;
+  word-wrap: normal;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+}
 #mobile-app pre .copy-btn{
 	opacity: 1;
-	bottom: 0;
-	top: unset;
-	right: unset;
-	left: 0;
+	bottom: unset;
+	top: 0;
+	right: 0;
 	font-size: .12rem;
 	z-index: 1;
 }
@@ -719,7 +759,7 @@ pre .copy-btn{
 	right: .1rem;
 	opacity: 0;
 	color: #b8c0cc;
-	background: #f8f8f8f0;
+	background: #f8f8f8;
 	line-height: 1.4;
 	padding: 0 .03rem;
 	border-radius: .03rem;
@@ -732,7 +772,7 @@ pre .copy-btn:hover{
 	background: #f0f0f0;
 
 }
-.comment-content pre .line-numbers-rows,.d-card-content .text pre .line-numbers-rows{
+pre .line-numbers-rows{
 	position: absolute;
 	top: 1em;
 	padding: 0;
@@ -744,15 +784,6 @@ pre .copy-btn:hover{
 	list-style-type: none;
 	color: #b8c0cc;
 	user-select: none;
-}
-.comment-content pre>code,.d-card-content .text pre>code{
-	font-family: inherit;
-	line-height: inherit;
-	word-spacing: normal;
-	word-wrap: normal;
-	word-break: normal;
-	white-space: pre;
-	background: transparent;
 }
 pre .hljs{
 	background: transparent;
@@ -814,15 +845,7 @@ blockquote>:last-child{
 .comment-content del:hover,.about-post del:hover,.link-description del:hover,.d-card-content .text del:hover{
 	color: white;
 }
-.comment-content p code,.d-card-content .text p code{
-	font-family: "Fira Code VF",monospace,sans-serif;
-	padding: .03rem;
-	font-size: 80%;
-	background: #1b1f230d;
-	border-radius: .03rem;
-	color: #ff7d7d;
-}
-.comment-content strong,.d-card-content .text strong{
+.markdown-area strong{
 	font-weight: bold;
 }
 

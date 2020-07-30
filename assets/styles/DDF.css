@@ -97,8 +97,9 @@
 .DDF .markdown-body table tr:nth-child(2n) {
 	background-color: #2b2b2b;
 }
-.DDF .markdown-body p code,.DDF .markdown-body li code{
-	background: #555;
+.DDF .markdown-body p code,.DDF .markdown-body li code,
+.DDF .markdown-area p code,.DDF .markdown-area li code{
+	background: #444;
 }
 .DDF .markdown-body .highlight pre,.DDF .markdown-body pre:not(.auto-textarea-block){
 	background: #333;

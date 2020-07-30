@@ -14,7 +14,7 @@
         <div class="comment-content-input" v-if="!previewOn">
           <textarea @keydown="textareaTab" placeholder="说点什么吧..." v-model="content"></textarea>
         </div>
-        <div class="comment-content preview" v-html="contentPreview" v-highlight v-else></div>
+        <div class="comment-content preview markdown-area" v-html="contentPreview" v-highlight v-else></div>
       </div>
       <div class="comment-robot-check">
         简单数学题：{{add1}} + {{add2}} = <input type="text" v-model.trim="sum">
@@ -40,7 +40,7 @@
               <span class="comment-time" :title="comment.datetime.substr(0,16)">{{comment.datetime|commentTime}}</span>
               <span v-show="!isMobile" class="comment-id">#{{comment.id}}</span>
             </div>
-            <div class="comment-content" v-html="commentRenderer(comment,false)" v-highlight></div>
+            <div class="comment-content markdown-area" v-html="commentRenderer(comment,false)" v-highlight></div>
             <button class="comment-reply no-select" @click="replyThis(comment.id,comment.uid,comment.uname)">回复</button>
           </div>
           <div class="comment-children">
@@ -55,7 +55,7 @@
                     <span class="comment-time" :title="reply.datetime.substr(0,16)">{{reply.datetime|commentTime}}</span>
                     <span v-show="!isMobile" class="comment-id">#{{reply.id}}</span>
                   </div>
-                  <div class="comment-content" v-html="commentRenderer(reply,true)" v-highlight></div>
+                  <div class="comment-content markdown-area" v-html="commentRenderer(reply,true)" v-highlight></div>
                   <button class="comment-reply no-select" @click="replyThis(reply.id,reply.uid,reply.uname)">回复</button>
                 </div>
               </div>
