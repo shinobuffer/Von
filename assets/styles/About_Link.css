@@ -9,34 +9,22 @@
 }
 .page-content.about{
 	max-width: 9rem;
-	padding: .2rem .1rem;
+	padding: .1rem;
 	overflow: hidden;
 }
-.about-post{
-	margin-bottom: .25rem;
-	text-align: left;
-}
-	.about-post time{
+	.post-about time{
 		font-weight: bold;
 	}
-	.about-post code{
-		background: #b8c0cc30;
-		border-radius: .03rem;
-		padding: .02rem;
-	}
-	.about-post p,.link-description p{
-		margin-bottom: .15rem;
-	}
-	.about-post h2{
+	.post-about h2{
 		font-size: .18rem;
-		margin-bottom: .1rem;
+		margin: .25rem 0 .1rem;
 	}
-	.about-post h4{
+	.post-about h4{
 		border-bottom: .01rem dotted #eaeaea;
 		padding-bottom: .05rem;
 		margin-bottom: .05rem;
 	}
-		.about-post h2 span{
+		.post-about h2 span{
 			font-size: .22rem;
 			padding-right: .05rem;
 			margin-right: .05rem;
@@ -46,7 +34,7 @@
 /*==================================================================*/
 /*Link*/
 #mobile-app .page-content.link{
-	padding: .2rem .1rem;
+	padding: .1rem;
 }
 .page-content.link{
 	padding-top: .2rem;
@@ -54,19 +42,10 @@
 	padding-right: .2rem;
 	max-width: 9rem;
 }
-.link-description h2:first-child{
-	margin-top: 0;
-}
 .link-description h2{
 	font-size: .2rem;
-	letter-spacing: .02cm;
 	margin: .25rem 0 .1rem;
 }
-	.link-description ul{
-		margin: .1rem 0;
-		padding-left: .4rem;
-		list-style: disc;
-	}
 
 .link-category .link_subtitle.friends{
 	color: #FF7D7D;

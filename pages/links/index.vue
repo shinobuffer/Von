@@ -14,20 +14,20 @@
     <div class="page-content-wrap">
       <div class="page-content link">
         <div class="content-area fc">
-          <div class="link-description tl">
+          <div class="link-description markdown-area tl">
             <h2>壹 · 关于友链</h2>
             <p>作为半个肥宅 + 半个技术宅，每访问一个船新的博客，我总会不自觉地去点开 关于&链接，想着会不会又见到一个技术dalao或者和我志趣相投的人。这是一种非常神奇的体验，遇到同类、发现新事物让我欣喜雀跃（或许也只是我的怪癖而已）。</p>
             <p>不管怎样，现在拥有了自己博客之后，我也能参与到这条链的传递当中了，请多多指教</p>
             <del>（虽然我对SPA的SEO不抱什么希望）</del>
             <h2>貳 · 几点希望</h2>
             <ul>
-              <li>符合社会主义核心价值观，网站不会给人造成困扰</li>
+              <li>网站不会给人造成困扰</li>
               <li>全站启用 HTTPS 访问 or 支持HTTP/2</li>
               <li>原创内容过半且定期更新</li>
               <li>第一点是硬性要求，不满足直接否决</li>
             </ul>
             <h2>叁 · 交易方式</h2>
-            <p>通过评论 OR <a href="mailto:oshinoNya@outlook.com">邮箱</a>留下 <strong>名称，链接，简介，头像</strong> 即可如</p>
+            <p>通过 <a href="#comments">评论</a> OR <a href="mailto:oshinoNya@outlook.com">邮箱</a> 留下 <strong>名称，链接，简介，头像</strong> 即可如</p>
             <blockquote>
               <p>Name：忍野喵<br>Link：https://www.bilibili.com<br>Bio：今天喝了典明粥了吗<br>Avatar：https://www.bilibili.com</p>
             </blockquote>

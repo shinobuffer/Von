@@ -715,7 +715,7 @@
 
 .markdown-area code,
 .markdown-area pre{
-  font-family: "Fira Code VF",monospace,sans-serif;
+  font-family: "Fira Code VF",sans-serif;
 }
 .markdown-area p code,.markdown-area li code{
   padding: 0 .03rem;
@@ -751,6 +751,7 @@
 	top: 0;
 	right: 0;
 	font-size: .12rem;
+	line-height: 1.2;
 	z-index: 1;
 }
 pre .copy-btn{
@@ -812,15 +813,15 @@ blockquote>:first-child{
 blockquote>:last-child{
 	margin-bottom: 0 !important;
 }
-.comment-content a,.about-post a,.link-description a,.d-card-content a{
+.markdown-area a{
 	color: #5abebc;
 	position: relative;
 	word-break: break-all;
 }
-.comment-content a:hover,.about-post a:hover,.link-description a:hover,.d-card-content a:hover{
+.markdown-area a:hover{
 	color: #00a1d6;
 }
-.comment-content a:after,.about-post a:after,.link-description a:after,.d-card-content a:after{
+.markdown-area a:after{
 	content: '';
 	position: absolute;
 	width: 100%;
@@ -832,17 +833,17 @@ blockquote>:last-child{
 	transform-origin: bottom right;
 	transition: transform .3s ease-in-out;
 }
-.comment-content a:hover:after,.about-post a:hover:after,.link-description a:hover:after,.d-card-content a:hover:after{
+.markdown-area a:hover:after{
 	transform: scaleX(1);
 	transform-origin: bottom left;
 }
-.comment-content del,.about-post del,.link-description del,.d-card-content .text del{
+.markdown-area del{
 	background: #1e1e1e;
 	color: #1e1e1e;
 	transition: .3s ease;
 	text-decoration: none;
 }
-.comment-content del:hover,.about-post del:hover,.link-description del:hover,.d-card-content .text del:hover{
+.markdown-area del:hover{
 	color: white;
 }
 .markdown-area strong{

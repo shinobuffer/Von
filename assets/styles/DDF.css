@@ -82,11 +82,13 @@
 
 
 
-.DDF .markdown-body s,.DDF .markdown-body del{
+.DDF .markdown-body s,.DDF .markdown-body del,
+.DDF .markdown-area s,.DDF .markdown-area del{
 	background: black;
 	color: black;
 }
-.DDF .markdown-body s:hover,.DDF .markdown-body del:hover{
+.DDF .markdown-body s:hover,.DDF .markdown-body del:hover,
+.DDF .markdown-area s:hover,.DDF .markdown-area del:hover{
 	background: #1a1a1a;
 	color: #ccc;
 }
