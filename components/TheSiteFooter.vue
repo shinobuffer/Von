@@ -4,12 +4,10 @@
       <section>
         <p>• 单身为狗 {{age}} 年</p>
         <p>• 朝循以始 夜继以终</p>
-        <p>• Alive: {{day}} 天 {{hour}} 小时 {{min}} 分 {{sec}} 秒</p>
       </section>
       <section>
-        <p>• Blog <a :href="repoUrl" target="_blank">Von {{ver}}</a></p>
-        <p>• Powered By <a href="https://github.com/Bersder" target="_blank">Bersder</a></p>
-        <p><a href="mailto:oshinoNya@outlook.com">• oshinoNya@outlook.com</a></p>
+        <p>• Blog: <a :href="repoUrl" target="_blank">Von</a> by <a href="https://github.com/Bersder" target="_blank">Bersder</a></p>
+        <p>• Alive: {{day}} 天 {{hour}} 小时 {{min}} 分</p>
       </section>
       <section>
         <p>Support:</p>
@@ -59,8 +57,8 @@ export default {
       this.hour = Math.floor(diff2/hourLast);
       let diff3 = diff2%hourLast;
       this.min = Math.floor(diff3/minuteLast);
-      let diff4 = diff3%minuteLast;
-      this.sec = Math.floor(diff4/1000);
+      //let diff4 = diff3%minuteLast;
+      //this.sec = Math.floor(diff4/1000);
     }
   }
 }

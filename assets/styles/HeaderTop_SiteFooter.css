@@ -142,10 +142,10 @@
 		border-left: .01rem solid #eaeaea;
 	}
 		.site-info section a[title]{
-			margin-right: .1rem;
+			margin-right: .05rem;
 			font-size: 0;
 			display: inline-block;
-			margin-bottom: .1rem;
+			margin-bottom: .05rem;
 		}
 .site-banner{
 	margin-top: .05rem;
