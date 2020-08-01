@@ -51,11 +51,10 @@
           <div class="pager" @click="loadMore" v-if="!noMore">
             <div class="dec"></div>
             <div class="previous-more">
-              <span>Previous</span>
+              <span>{{this.waiting?'Loading...':'Previous'}}</span>
             </div>
           </div>
           <div class="pager-no-more fc" v-else>已经到达底部啦</div>
-
         </div>
         <homepage-aside v-if="!isMobile"/>
       </div>

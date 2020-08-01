@@ -6,3 +6,4 @@ Disallow: /takenote
 Disallow: /search
 Disallow: /downloads
 Disallow: /tags/
+Sitemap: https://oshinonya.com/sitemap.xml

@@ -10,7 +10,7 @@
               <div class="bgm-item" v-for="item in watching" :key="item.id">
                 <div class="bgm-item-pic" :style="{backgroundImage:'url('+item.cover+')'}" :title="item.comment"></div>
                 <div class="bgm-item-info">
-                  <span class="bgm-item-title raw"><a :href="item.link" target="_blank">{{item.name}}</a></span>
+                  <span class="bgm-item-title raw"><a :href="item.link" target="_blank" rel="nofollow">{{item.name}}</a></span>
                   <span class="bgm-item-title" :title="item.nameCN">{{item.nameCN}}</span>
                   <div class="bgm-item-status-wrap">
                     <div class="bgm-item-status" :style="{width:item.curNum/item.epsNum*100 +'%'}"></div>
@@ -28,7 +28,7 @@
               <div class="bgm-item" v-for="item in watched" :key="item.id">
                 <div class="bgm-item-pic" :style="{backgroundImage:'url('+item.cover+')'}" :title="item.comment"></div>
                 <div class="bgm-item-info">
-                  <span class="bgm-item-title raw"><a :href="item.link" target="_blank">{{item.name}}</a></span>
+                  <span class="bgm-item-title raw"><a :href="item.link" target="_blank" rel="nofollow">{{item.name}}</a></span>
                   <span class="bgm-item-title" :title="item.nameCN">{{item.nameCN}}</span>
                 </div>
               </div>
