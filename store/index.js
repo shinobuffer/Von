@@ -43,6 +43,7 @@ export const actions = {
     for (let i = 0; i < UAS.length; i++)
       if (USER_UA.toLowerCase().indexOf(UAS[i].toLowerCase()) > -1){
         commit('platformInit',{platform:UAS[i],isMobile:true});
+        commit('screenSizeC',{screenHeight:902,screenWidth:720})
         break
       }
     // 接受到页面请求，首先尝试自动登录填充登录信息供鉴权

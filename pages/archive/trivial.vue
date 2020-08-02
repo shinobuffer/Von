@@ -23,7 +23,6 @@
           <div class="article-list" data-empty-text="如果你看到了这个，说明我在搬砖" :class="{empty:noContent}">
             <waiting v-show="artWaiting"/>
             <div class="panel-t tl" v-for="art in curArts" :key="art.aid">
-              <p class="pt-time"><i class="iconfont icon-time"></i> {{art.time.substr(0,10)}}</p>
               <div class="panel-t-img">
                 <nuxt-link :to="art.aid" append>
                   <img v-lazyload="[`/root${art.imgSrc}`,`/root${art.imgSrc}.thumb`]" :alt="art.title">
@@ -32,8 +31,8 @@
               <div class="panel-t-info ">
                 <h2 class="title"><nuxt-link :to="art.aid" append>{{art.title}}</nuxt-link></h2>
                 <p class="preview">{{art.preview}}</p>
-                <p class="cut-line-d" style="margin: .1rem 0"></p>
-                <span><i class="iconfont icon-geren"></i>{{art.author}}</span>
+                <p class="cut-line"></p>
+                <span><i class="iconfont icon-time"></i>{{art.time|ymd2Mdy}}</span>
                 <span><i class="iconfont icon-fire"></i>{{art.readCount}}</span>
                 <span><nuxt-link :to="art.aid+'#comments'" append class="comments"><i class="iconfont icon-comment"></i>{{art.commentCount}}</nuxt-link></span>
               </div>
@@ -77,6 +76,12 @@ export default {
   },
   components:{
     TrivialAside
+  },
+  filters:{
+    ymd2Mdy(datetime){
+      let ymd = datetime.substr(0,10).split('-');
+      return `${['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][parseInt(ymd[1])]} ${ymd[2]}, ${ymd[0]}`;
+    }
   },
   asyncData({app,req}){
     return app.$fetch('/apis/apiv1.php',{_:'trivial'},req).then(res=>{

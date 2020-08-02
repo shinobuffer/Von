@@ -205,11 +205,13 @@
 }
 .DDF .panel-t{
 	color: #ccc;
-	border-color: #666;
-	background: #66666680;
+	background: #333;
 }
-.DDF .pt-time,.DDF .cut-line-d{
-	border-color: #aaa;
+/*高亮边框暗化*/
+.DDF .description,.DDF .article-order,
+.DDF .cut-line,.DDF .cut-line-d,
+.DDF .post-footer,.DDF .post-copyright{
+	border-color: #555;
 }
 .DDF .order-list li{
 	border-bottom: none;

@@ -1023,12 +1023,12 @@ input::-webkit-search-cancel-button{
 .clearm{margin:0}
 .ibold{font-weight: 600}
 .cut-line{
-	border-bottom: 1px solid darkgray;
-	margin: 10px ;
+	border-bottom: 1px solid #eee;
+	margin: .1rem 0;
 }
 .cut-line-d{
-	border: .01rem dashed #dadada;
-	margin: .1rem;
+	border-bottom: .01rem dashed #eee;
+	margin: .1rem 0;
 }
 .isolate{
 	margin: 0 .05rem;

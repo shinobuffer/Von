@@ -21,7 +21,7 @@
 		transition: .4s;
 	}
 	.panel:hover .img{
-		transform: scale(1.1);
+		transform: scale(1.05);
 	}
 .panel-info{
 	padding: .1rem .2rem;
@@ -39,10 +39,6 @@
 	.panel-info a.title:hover{
 		color: #5abebc;
 	}
-  .panel-info .cut-line{
-    margin: .1rem 0;
-    border-color: #ccc;
-  }
 	.panel-info .meta{
 		font-size: .14rem;
 		color: #a7a8a9;

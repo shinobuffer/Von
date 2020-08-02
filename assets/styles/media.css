@@ -258,7 +258,7 @@
 	.panel-img{
 		height: 1.5rem;
 	}
-  .panel-info .cut-line{
+  .panel-info .cut-line,.panel-t-info .cut-line{
     margin: .05rem 0;
   }
   .panel-info .meta{
