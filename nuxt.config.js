@@ -27,10 +27,10 @@ module.exports = {
     title: '忍野喵 | おしの · にゃ',
     meta: [
       { charset: 'utf-8' },
-      { name: 'google-site-verification', content: 'WRATWWuqpi__psp2LqrzV5I4SZV1AoHSYmiB6K7B2qI'},
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '忍野喵的温馨破窝' },
-      { hid: 'keywords', name: 'keywords', content: '忍野喵,oshinonya,ACGN,coding,二次元,动漫,游戏,极客,jojo,东方Project,Fate,明日方舟' }
+      { hid: 'keywords', name: 'keywords', content: '忍野喵,oshinonya,ACGN,coding,二次元,动漫,游戏,极客,jojo,东方Project,Fate,明日方舟' },
+      { name: 'google-site-verification', content: 'WRATWWuqpi__psp2LqrzV5I4SZV1AoHSYmiB6K7B2qI'}
     ],
     link: [
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },

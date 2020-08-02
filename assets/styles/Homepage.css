@@ -5,8 +5,9 @@
 	transition: 1s cubic-bezier(.25,.46,.45,.94);
 	background: transparent;
 }
-#app .page-content.homepage.hidden{
+.page-content.homepage.hidden{
 	opacity: 0;
+  pointer-events: none;
 }
 .content-primary-h{
 	max-width: 7rem;

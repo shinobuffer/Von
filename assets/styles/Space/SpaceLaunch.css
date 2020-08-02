@@ -57,7 +57,7 @@
 		color: #00a1d6;
 	}
 	.draft-list-item .draft-update{
-		color: #6d757a;
+		color: #aaa;
 	}
 	.draft-list-item .draft-edit{
 		color: #00a1d6;
@@ -71,20 +71,14 @@
 
 /*==================================================================*/
 /*Admin*/
-.a-table-wrap{
-	max-height: 5.5rem;
-	overflow:auto;
-  overscroll-behavior: contain;
-}
 .a-table{
 	display: table;
-	border-collapse: collapse;
 	width: 100%;
 	text-align: left;
 }
 .a-table span{
 	font-size: .12rem;
-	color: #a1a1a1;
+	color: #aaa;
 }
 .a-table a{
 	color: #00a1d6;
@@ -104,8 +98,6 @@
 	}
 .a-table-row{
 	display: table-row;
-	border-top: .01rem solid #eaeaea;
-	border-bottom: .01rem solid #eaeaea;
 	font-size: .14rem;
 }
 .a-table-row:nth-child(even){
@@ -122,7 +114,7 @@
 		width: 1.2rem;
 	}
 	.a-table-row .utime{
-		color: #6d757a;
+		color: #aaa;
 		width: 1rem;
 	}
 	.a-table-row .operate button{
@@ -169,7 +161,7 @@
 		}
 		.s-cell span{
 			font-size: .14rem;
-			color: #8b8e99;
+			color: #aaa;
 		}
 .admin-nav{
 	border-bottom: .01rem solid #eaeaea;
