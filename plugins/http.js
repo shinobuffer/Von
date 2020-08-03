@@ -1,6 +1,6 @@
 import axios from 'axios';
 import qs from 'qs';
-axios.defaults.timeout = 60000;
+axios.defaults.timeout = 300000;
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = process.env.API_ROOT;
 export default ({app,store,redirect,req},inject)=>{
@@ -16,7 +16,7 @@ export default ({app,store,redirect,req},inject)=>{
             redirect('/');
             break;
           case 404:
-            console.warn('api not find');
+            console.warn(err.response.config.url+' not find');
         }
       return Promise.reject(err)
     }

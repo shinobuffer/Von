@@ -116,7 +116,7 @@ export default {
       loginStatus:state=>state.account.loginStatus,
     })
   },
-  created(){
+  beforeMount(){
     this.$fetch('/apis/apiv0.php').then(res=>{
       let {name,avatar,sign,status} = res.data.data.info;
       this.meName = name;
