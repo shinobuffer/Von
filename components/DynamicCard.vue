@@ -121,6 +121,7 @@
 
 <script>
 import marked from 'marked';
+import {getLocalStorage, setLocalStorage} from "../utils/storageManager";
 import Validator from '../utils/Validator';
 import Mixin_RichText from "../reuse/mixins/Mixin-RichText";
 import EmotionBox from './public/EmotionBox';
@@ -214,7 +215,8 @@ export default {
       setTimeout(()=>document.getElementById('comments-'+this.ddata.id).scrollIntoView(true),100);
     }
   },
-  created(){
+  beforeMount(){
+    [this.nickname,this.email] = getLocalStorage(['COMMENT_NICKNAME','COMMENT_EMAIL']);
     this.markedInit();
     //this.$forceUpdate();
   },
@@ -321,9 +323,13 @@ export default {
       };
       if(window.confirm('即将提交评论，是否确认')){
         this.$post('/apis/apiv16p2.php',data).then(response=>{
+          setLocalStorage({
+            COMMENT_NICKNAME:this.nickname,
+            COMMENT_EMAIL:this.email
+          });
           if (response.data.code<1){
             //如果是回复更新当页，否则进行回到第一页更新
-            this.nickname = this.email = this.qq = this.content = '';
+            this.content = '';
             if (this.to_id){
               this.cancelReply();
               this.fetchComment((this.curPage-1)*10);

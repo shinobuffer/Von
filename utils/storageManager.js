@@ -47,9 +47,14 @@ export function delCookie(key,domain=null) {
   setCookie(key,'',-1,domain)
 }
 
+export function getLocalStorage(keys) {
+  keys = typeof keys === "string"?[keys]:keys;
+  return keys.map(key=>localStorage.getItem(key)||'')
+}
+
 export function setLocalStorage(data){
-  for (let {key,val} of data.entries())
-    localStorage.setItem(key,val)
+  for (let [key,val] of Object.entries(data))
+    (typeof val!=='undefined') && val!=='' && localStorage.setItem(key,val.toString())
 }
 
 export function delLocalStorage(keys) {

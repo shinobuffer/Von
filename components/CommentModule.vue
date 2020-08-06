@@ -81,6 +81,7 @@
 
 <script>
 import {randInt} from "../utils/lib";
+import {getLocalStorage, setLocalStorage} from "../utils/storageManager";
 import Validator from '../utils/Validator';
 import marked from 'marked';
 import Mixin_RichText from '../reuse/mixins/Mixin-RichText';
@@ -131,6 +132,7 @@ export default {
     }
   },
   async beforeMount(){
+    [this.nickname,this.email] = getLocalStorage(['COMMENT_NICKNAME','COMMENT_EMAIL']);
     this.markedInit();
     this.genRandAdd();
     await this.fetchEmo();
@@ -198,7 +200,7 @@ export default {
         this.$store.dispatch('infoBox/callInfoBox',{info:err, ok:false, during:3000});
         return;
       }
-      if (this.add1+this.add2==this.sum){
+      if (this.add1+this.add2===parseInt(this.sum)){
         let data = {
           puzzle:btoa(this.add1+','+this.add2+','+this.sum),
           id:this.id_,
@@ -214,8 +216,12 @@ export default {
         };
         if(window.confirm('即将提交评论，是否确认')){
           this.$post('/apis/apiv7.php',data).then(response=>{
+            setLocalStorage({
+              COMMENT_NICKNAME:this.nickname,
+              COMMENT_EMAIL:this.email
+            });
             if (response.data.code<1){
-              this.nickname = this.email = this.qq = this.website = this.content = this.contentPreview = '';
+              this.content = this.contentPreview = '';
               this.previewOn = false;
               if (this.to_id){
                 this.cancelReply();
