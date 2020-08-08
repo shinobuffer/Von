@@ -687,6 +687,9 @@
 .comment-content.markdown-area p{
 	margin: .5em 0;
 }
+.comment-content.markdown-area p:first-child{
+	margin-top: 0;
+}
 .markdown-area blockquote,
 .markdown-area p,
 .markdown-area ol,

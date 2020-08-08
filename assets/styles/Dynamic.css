@@ -37,8 +37,8 @@
 }
 
 .author-sub-panel .content .author-pic{
-	background: url("/root/site/bg/bg3.jpg") center/cover no-repeat;
-	height: .6rem;
+	background: url("/root/site/bg/dynamic-pic.jpg") center/cover no-repeat;
+	height: .65rem;
 }
 .author-sub-panel .content .author-namae{
 	display: inline-block;

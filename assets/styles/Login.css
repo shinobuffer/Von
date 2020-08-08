@@ -1,10 +1,13 @@
 .login-wrap{
 	position: relative;
 }
+#mobile-app .login-wrap:before{
+	background-image: url("/root/site/bg/login-m-bg.jpg");
+}
 .login-wrap:before{
 	content: '';
 	position: absolute;
-	background-image: url(/root/site/bg/loginbg.jpg);
+	background-image: url("/root/site/bg/login-bg.jpg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -12,7 +15,6 @@
 	left: 0;
 	height: 100%;
 	width: 100%;
-	filter: blur(2px);
 }
 .login{
 	width: 350px;

@@ -22,7 +22,7 @@
 ## Getting Started（待完善
 该博客安装分为前端和后端两部分进行
 ### Back-end
-后端需要 LNPM 环境，网上的一键安装应该也可以吧（没试过），如果你也喜欢折腾，可以参考[这篇文章](https://oshinonya.com/archive/code/2)
+后端需要 LNPM 环境，宝塔之类的一键安装应该也可以吧（没试过），如果你喜欢折腾，可以参考[这篇文章](https://oshinonya.com/archive/code/2)（我的生产环境就是基于此的）
 
 LNPM 部署并配置好后
 - 执行sql脚本（见后端项目）初始化数据库
@@ -56,7 +56,7 @@ server {
         root html_nuxt;
         access_log off;
         # 静态资源允许跨域，设置缓存
-        expires 15d;
+        expires 30d;
         add_header Access-Control-Allow-Origin *;
         add_header Access-Control-Allow-Headers X-Requested-With;
         add_header Access-Control-Allow-Methods GET,POST,OPTIONS;
@@ -98,25 +98,35 @@ ___
 - 按需修改 `config/user.conf.js`
 - 修改 `pages/about/index.vue` 的模板（关于页面）
 - 修改 `pages/links/index.vue` 的模板（友链页面）
+- 修改 `staitc/robots.txt` 中sitemap指向
 
-**对整个项目除`nuxt.config.js`的所有文件进行正则替换，把`'/root'\+|/root`替换为空（共46个分布在27个文件中）**
+修改完后**对整个项目除`nuxt.config.js`和`README.md`的所有文件进行正则替换，把`'/root'\+|/root`替换为空（共47个分布在27个文件中）**，到此代码部分修改完成，进入打包环节。
 
-然后在项目根目录执行 `npm run build` 打包生成 `.nuxt` 文件夹。将 **.nuxt, nuxt.config.js, package.json, static/static** 上传至服务器网站根目录
+先`npm install`安装项目依赖，然后在项目根目录执行 `npm run build` 打包生成 `.nuxt` 文件夹。将 **.nuxt, nuxt.config.js, package.json, package-lock.json, static下的所有文件** 上传至服务器网站根目录
+
 ### Run
 到此网站根目录应该如下
 ```text
 www_root
   |--apis/
+  |--apple-icon.png
   |--downloads/
+  |--favicon.ico
   |--music/
   |--node_modules/
+  |--.nuxt/
+  |--nuxt.config.js
+  |--package.json
+  |--package-lock.json
+  |--robots.txt
   |--site/
+  |--sitemap.xml
   |--static/
   |--tmp/
   |--uploads/
-  |--.nuxt/
-  |--
 ```
+再次检查php-fpm、nginx、mariadb/mysql服务是否已开启，如果没有问题，命令行执行`pm2 start npm --name "自定名称" -- run start`让pm2托管SSR服务，再执行`pm2 save`保存当前任务实现自启
+
 ## Support
 Nothing Yet
 ## Author
