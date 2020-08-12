@@ -432,7 +432,7 @@
 }
 .board-content{
 	font-size: .14rem;
-	letter-spacing: .003rem;
+	word-break: break-all;
 	line-height: .18rem;
 	text-align: left;
 	text-indent: 2em;

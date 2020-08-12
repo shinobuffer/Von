@@ -30,7 +30,7 @@
 
     <div class="section upload-list tl">
       <h3 class="section-title">待上传</h3>
-      <div class="section-content" :class="{empty:!imgs.length}" data-empty-text="待上传图片——无">
+      <div class="section-content" :class="{empty:!imgs.length}" data-empty-text="无待上传图片">
         <div class="upload-list">
           <div class="album-card" v-for="item in imgs" :key="item.ts">
             <div class="picture" :style="item.img|bgUrl" :class="{uploading:item.uploading,fail:item.fail}">

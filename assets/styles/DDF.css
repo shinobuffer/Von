@@ -93,8 +93,10 @@
 	color: #ccc;
 }
 .DDF .markdown-body table tr {
-	background-color: #555;
-	border-top: 1px solid #c6cbd1;
+	background-color: #3a3a3a;
+}
+.DDF .markdown-body table td,.DDF .markdown-body table th{
+	border-color: #555;
 }
 .DDF .markdown-body table tr:nth-child(2n) {
 	background-color: #2b2b2b;
@@ -312,28 +314,30 @@
 .DDF .comments-list-item,.DDF .comments-list-title,
 .DDF .category-list .category-list-item,.DDF .tag-query-result ul li,
 .DDF .section,.DDF .col-2 .section .section-title,/*1*/
-.DDF .type-selector div,
+.DDF .type-selector li,
 .DDF .l-main,.DDF .a-main,.DDF .draft-head,.DDF .album-head,.DDF .draft-list-item,.DDF .admin-nav,
 .DDF .upload-foot span,
 .DDF .setting-series ul li,.DDF .setting-cat ul li,.DDF .header-card,.DDF .s-link-list
 {
 	border-color: #555;
 }
-.DDF .type-selector div.cur,.DDF .dynamic-launch button:hover,/*2*/
+.DDF .type-selector li.cur,.DDF .dynamic-launch button:hover,.DDF .anli-add-wrap button:hover,/*2*/
 .DDF .sidenav-list .sidenav-item.cur a,.DDF .sidenav-list .sidenav-item a:hover,.DDF .draft-list-item .draft-type,
-.DDF .s-link-list h4/*5*/
+.DDF .upload-box button:hover,.DDF .upload-foot button:hover,
+.DDF .s-link-list h4
 {
-	background: #555;
+	background: #444;
 }
-.DDF .album-content .tab-list,/*4*/
+.DDF .album-content .tab-list,.DDF .upload-info .type-input ul li:hover,/*4*/
+.DDF .link-add .type-input ul li:hover,.DDF .tag-del .match-list .match-list-item:hover,
 .DDF .setting-series ul li:hover,.DDF .setting-cat ul li:hover,
 .DDF .tag-btn .tag-item,
 .DDF .type-btn li:hover,.DDF .series-btn li:hover,.DDF .cat-btn li:hover
 {
-	background: #666;
+	background: #444;
 }
 .DDF .memo textarea,/*1*/
-.DDF .type-selector div,.DDF .dynamic-launch button,
+.DDF .type-selector li,.DDF .dynamic-launch button,.DDF .anli-add-wrap button,
 .DDF .sidenav-list .sidenav-item a,.DDF .admin-nav-item,
 .DDF .auto-textarea-wrapper .auto-textarea-input,
 .DDF .draft-content.empty:after,.DDF .album-content.empty:after,.DDF .section-content.empty:before
@@ -342,14 +346,18 @@
 }
 .DDF .a-table-row:nth-child(even),.DDF .admin-statistics .s-cell,.DDF .admin-nav-item.cur,.DDF .admin-nav-item:hover/*3*/
 {
-	background: #444;
-	border-color: #555;
+	background: #3a3a3a;
+	border-color: #444;
 }
 .DDF .upload-info .type-input,.DDF .upload-info .description-input,.DDF .upload-info .type-input ul,.DDF .link-add .type-input ul,/*4*/
 .DDF .tag-del input,.DDF .tag-del .match-list,.DDF .tag-add input,.DDF .series-add input,.DDF .series-des-add input,.DDF .cat-add input,.DDF .setting-series ul,.DDF .setting-cat ul,.DDF .header-card .bg-title,.DDF .link-add input,.DDF .link-add .type-input
 {
+	background: #333;
+	border-color: #444;
+	color: #ccc;
+}
+.DDF .recommend-edit .anli-add input{
 	background: #444;
-	border-color: #555;
 	color: #ccc;
 }
 .DDF .a-table-row .operate button,
