@@ -130,7 +130,13 @@
 		background: #ffd2db;
 		color: #ff5678;
 	}
-
+	.a-table-row .operate button.top{
+		float: right;
+		opacity: 0;
+	}
+	.a-table-row .operate:hover button.top{
+		opacity: 1;
+	}
 
 
 

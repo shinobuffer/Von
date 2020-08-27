@@ -88,7 +88,7 @@ export default {
       isOpened:false,
       searchKey:'',
       meName:'???',
-      meAvatar:'/static/images/passerby.png',
+      meAvatar:'data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==',
       meSign:'这个人懒成了鸽子',
       meStatus:0,
       statusMap:UCONF.statusMap
