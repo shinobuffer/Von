@@ -264,7 +264,7 @@
 	border-color: #555;
 }
 .DDF .site-footer{
-	box-shadow:0 -.01rem .05rem #ffffff40;
+	box-shadow:0 -.02rem .02rem #ffffff20;
 	color: white;
 	background: rgba(0,0,0,.88);
 }
@@ -356,6 +356,11 @@
 	border-color: #444;
 	color: #ccc;
 }
+
+.DDF .ss-table .ss-table-cell:hover{
+	background: #444;
+	border-color: #555;
+}
 .DDF .recommend-edit .anli-add input{
 	background: #444;
 	color: #ccc;
@@ -383,7 +388,7 @@
 
 
 
-.DDF .bgm-item,
+.DDF .bgm-item,.DDF .ss-table .ss-table-cell,
 .DDF .zoom-wrap .zoom-control{
 	background: #333;
 }

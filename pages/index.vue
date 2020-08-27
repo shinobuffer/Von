@@ -6,7 +6,7 @@
         <div class="notice fc tl" v-if="notice"><i class="iconfont icon-notify"></i> {{notice}}</div>
         <div class="content-primary-h">
           <div class="topped-area" v-if="!isMobile&&topped.length">
-            <p class="description tl"><i class="iconfont icon-anchor"></i> 置顶区</p>
+            <p class="description tl"><i class="iconfont icon-anchor"></i>置顶</p>
             <div class="topped-list tl">
               <div class="panel-topped" v-for="item in topped" :key="item.aid" :class="{odd:topped.length%2}">
                 <nuxt-link :to="item|artUrl">
@@ -20,7 +20,7 @@
             </div>
           </div>
           <div class="panel-h-list">
-            <p class="description tl"><i class="iconfont icon-torii-gate"></i> 入る</p>
+            <p class="description tl"><i class="iconfont icon-torii-gate"></i>文章</p>
             <div class="panel-h" v-for="each in curArts" :key="each.aid">
               <div class="panel-h-img">
                 <nuxt-link :to="each|artUrl">

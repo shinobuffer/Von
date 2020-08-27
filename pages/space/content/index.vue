@@ -35,7 +35,11 @@
           <div class="comment-num"><nuxt-link :to="each|commentUrl">{{each.commentCount}}</nuxt-link></div>
           <div class="ptime">{{each.time.substr(0,10)}}</div>
           <div class="utime">{{each.lut|updateTime}}</div>
-          <div class="operate"><button @click="editItem(each)">编辑</button> / <button v-if="each.topped" @click="topItem(each)">{{parseInt(each.topped)?'取消置顶':'置顶'}}</button> / <button @click="delItem(each)" class="del">删除</button></div>
+          <div class="operate">
+            <button @click="editItem(each)">编辑</button> /
+            <button @click="delItem(each)" class="del">删除</button>
+            <button class="top" v-if="each.topped" @click="topItem(each)">{{each.topped>0?'取消置顶':'置顶'}}</button>
+          </div>
         </div>
       </div>
     </div>
@@ -166,6 +170,21 @@ export default {
         }
       }).catch(err=>console.warn(err))
     },
+    hideItem(item){
+      let query = parseInt(item.hidden)?'':'?hide'
+      this.$post('/apis/auth/v6api.php'+query,{id:item.id,type:item.type}).then(({data})=>{
+        if (data.code < 1){
+          this.$store.dispatch('infoBox/callInfoBox',{
+            info:parseInt(item.hidden)?'文章显示':'文章隐藏',
+            ok:true,
+            during:2000
+          });
+          // TODO: 这里需要将隐藏状态取反
+          // TODO: 操作按钮添加 <button @click="hideItem(each)">{{each.hidden>0?'显示':'隐藏'}}</button> /
+        }else
+          this.$store.dispatch('infoBox/callInfoBox',{info:'操作失败', ok:false, during:2000});
+      }).catch(err=>console.warn(err))
+    },
     topItem(item){
       let query = parseInt(item.topped)?'':'?topped';
       this.$post('/apis/auth/v4api.php'+query,{id:item.id}).then(response=>{
@@ -177,13 +196,8 @@ export default {
             during:2000
           });
           item.topped = parseInt(item.topped)?'0':'1'
-        }
-        else
-          this.$store.dispatch('infoBox/callInfoBox',{
-            info:'操作失败',
-            ok:true,
-            during:2000
-          });
+        }else
+          this.$store.dispatch('infoBox/callInfoBox',{info:'操作失败', ok:false, during:2000});
       }).catch(err=>console.warn(err))
     },
     delItem(item){
